@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/userGroup.do" location="617,151" dimension="274,96" />
+  <StrutsActivity path="/modifyUserGroup.do" location="1068,151" dimension="312,96" />
+  <StrutsActivity path="/addUser.do" location="1465,1051" dimension="342,96" />
+  <StrutsActivity path="/userReports.do" location="631,608" dimension="382,96" />
+  <StrutsActivity path="/jsp/admin/userGroup/declareGroup.jsp" location="343,457" dimension="243,51" />
+  <StrutsActivity path="/jsp/admin/userGroup/addNewUserGroup.jsp" location="686,457" dimension="272,51" />
+  <StrutsActivity path="/jsp/admin/userGroup/userRight.jsp" location="1058,457" dimension="222,51" />
+  <StrutsActivity path="/jsp/admin/userGroup/modifyGroup.jsp" location="0,457" dimension="243,51" />
+  <StrutsActivity path="/jsp/admin/userGroup/listUserName.jsp" location="1380,457" dimension="242,51" />
+  <StrutsActivity path="/jsp/admin/userGroup.jsp" location="670,0" dimension="167,51" />
+  <StrutsActivity path="/jsp/admin/userGroup/modifyGroupRights.jsp" location="1722,457" dimension="276,51" />
+  <StrutsActivity path="/jsp/admin/modifyGroupRights.jsp" location="1116,0" dimension="216,51" />
+  <StrutsActivity path="/jsp/admin/user/downloadBackups.jsp" location="0,1327" dimension="236,51" />
+  <StrutsActivity path="/jsp/admin/user/activateUsers.jsp" location="336,1327" dimension="208,51" />
+  <StrutsActivity path="/jsp/admin/user/changePassword.jsp" location="644,1327" dimension="228,51" />
+  <StrutsActivity path="/jsp/admin/blank/blank.jsp" location="972,1327" dimension="175,51" />
+  <StrutsActivity path="/jsp/admin/user/searchSid.jsp" location="1247,1327" dimension="189,51" />
+  <StrutsActivity path="/jsp/admin/user/modifyUser.jsp" location="1536,1327" dimension="200,51" />
+  <StrutsActivity path="/jsp/admin/user/powerUpStudents.jsp" location="1836,1327" dimension="233,51" />
+  <StrutsActivity path="/jsp/admin/user/addUser.jsp" location="2169,1327" dimension="182,51" />
+  <StrutsActivity path="/jsp/admin/user/powerUpUsers.jsp" location="2451,1327" dimension="215,51" />
+  <StrutsActivity path="/jsp/admin/user/listUser.jsp" location="2766,1327" dimension="177,51" />
+  <StrutsActivity path="/jsp/admin/user/listBackups.jsp" location="3043,1327" dimension="198,51" />
+  <StrutsActivity path="/jsp/admin/addUser.jsp" location="1558,900" dimension="155,51" />
+  <StrutsActivity path="/jsp/admin/reports/logReport.jsp" location="92,804" dimension="206,51" />
+  <StrutsActivity path="/jsp/admin/reports/logCheck.jsp" location="398,804" dimension="204,51" />
+  <StrutsActivity path="/jsp/admin/reports/staffInformation.jsp" location="702,804" dimension="240,51" />
+  <StrutsActivity path="/jsp/admin/reports/searchUser.jsp" location="1042,804" dimension="211,51" />
+  <StrutsActivity path="/jsp/admin/reports/showUserLog.jsp" location="1353,804" dimension="225,51" />
+  <StrutsTransition id="/addUser.do,changePassword,/jsp/admin/user/changePassword.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1542,1147" />
+      <AbsolutePoint location="1542,1237" />
+      <AbsolutePoint location="758,1237" />
+      <AbsolutePoint location="758,1327" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/userGroup.do,declareGroup,/jsp/admin/userGroup/declareGroup.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="699,247" />
+      <AbsolutePoint location="699,307" />
+      <AbsolutePoint location="403,307" />
+      <AbsolutePoint location="403,457" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/userReports.do,staffInformation,/jsp/admin/reports/staffInformation.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="822,704" />
+      <AbsolutePoint location="822,804" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/addUser.do,searchSid,/jsp/admin/user/searchSid.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1604,1147" />
+      <AbsolutePoint location="1604,1297" />
+      <AbsolutePoint location="1341,1297" />
+      <AbsolutePoint location="1341,1327" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/userReports.do,logReport,/jsp/admin/reports/logReport.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="669,704" />
+      <AbsolutePoint location="669,739" />
+      <AbsolutePoint location="195,739" />
+      <AbsolutePoint location="195,804" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/jsp/admin/userGroup.jsp,null,/userGroup.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="754,51" />
+      <AbsolutePoint location="754,151" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/userGroup.do,modifyGroup,/jsp/admin/userGroup/modifyGroup.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="644,247" />
+      <AbsolutePoint location="644,277" />
+      <AbsolutePoint location="121,277" />
+      <AbsolutePoint location="121,457" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/userReports.do,searchUserLog,/jsp/admin/reports/searchUser.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="898,704" />
+      <AbsolutePoint location="898,769" />
+      <AbsolutePoint location="1147,769" />
+      <AbsolutePoint location="1147,804" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/addUser.do,activateUsers,/jsp/admin/user/activateUsers.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1511,1147" />
+      <AbsolutePoint location="1511,1207" />
+      <AbsolutePoint location="440,1207" />
+      <AbsolutePoint location="440,1327" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/modifyUserGroup.do,addNewGroup,/jsp/admin/userGroup/addNewUserGroup.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1162,247" />
+      <AbsolutePoint location="1162,427" />
+      <AbsolutePoint location="890,427" />
+      <AbsolutePoint location="890,457" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/userGroup.do,userRight,/jsp/admin/userGroup/userRight.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="808,247" />
+      <AbsolutePoint location="808,367" />
+      <AbsolutePoint location="1113,367" />
+      <AbsolutePoint location="1113,457" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/addUser.do,downloadBackups,/jsp/admin/user/downloadBackups.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1480,1147" />
+      <AbsolutePoint location="1480,1177" />
+      <AbsolutePoint location="118,1177" />
+      <AbsolutePoint location="118,1327" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/jsp/admin/addUser.jsp,null,/addUser.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1636,951" />
+      <AbsolutePoint location="1636,1051" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/addUser.do,powerUpUsers,/jsp/admin/user/powerUpUsers.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1729,1147" />
+      <AbsolutePoint location="1729,1237" />
+      <AbsolutePoint location="2558,1237" />
+      <AbsolutePoint location="2558,1327" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/addUser.do,listBackups,/jsp/admin/user/listBackups.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1791,1147" />
+      <AbsolutePoint location="1791,1177" />
+      <AbsolutePoint location="3142,1177" />
+      <AbsolutePoint location="3142,1327" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/addUser.do,blank,/jsp/admin/blank/blank.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1573,1147" />
+      <AbsolutePoint location="1573,1267" />
+      <AbsolutePoint location="1059,1267" />
+      <AbsolutePoint location="1059,1327" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/addUser.do,powerUpStudents,/jsp/admin/user/powerUpStudents.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1667,1147" />
+      <AbsolutePoint location="1667,1297" />
+      <AbsolutePoint location="1952,1297" />
+      <AbsolutePoint location="1952,1327" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/addUser.do,listUser,/jsp/admin/user/listUser.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1760,1147" />
+      <AbsolutePoint location="1760,1207" />
+      <AbsolutePoint location="2854,1207" />
+      <AbsolutePoint location="2854,1327" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/modifyUserGroup.do,declareGroup,/jsp/admin/userGroup/declareGroup.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1099,247" />
+      <AbsolutePoint location="1099,397" />
+      <AbsolutePoint location="525,397" />
+      <AbsolutePoint location="525,457" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/addUser.do,modifyUser,/jsp/admin/user/modifyUser.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1636,1147" />
+      <AbsolutePoint location="1636,1327" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/modifyUserGroup.do,listUserName,/jsp/admin/userGroup/listUserName.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1286,247" />
+      <AbsolutePoint location="1286,307" />
+      <AbsolutePoint location="1561,307" />
+      <AbsolutePoint location="1561,457" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/modifyUserGroup.do,modifyGroup,/jsp/admin/userGroup/modifyGroupRights.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1349,247" />
+      <AbsolutePoint location="1349,277" />
+      <AbsolutePoint location="1860,277" />
+      <AbsolutePoint location="1860,457" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/userGroup.do,addNewGroup,/jsp/admin/userGroup/addNewUserGroup.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="754,247" />
+      <AbsolutePoint location="754,457" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/jsp/admin/modifyGroupRights.jsp,null,/modifyUserGroup.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1224,51" />
+      <AbsolutePoint location="1224,151" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/jsp/admin/userGroup/addNewUserGroup.jsp,null,/userReports.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="822,508" />
+      <AbsolutePoint location="822,608" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/modifyUserGroup.do,userRight,/jsp/admin/userGroup/userRight.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1224,247" />
+      <AbsolutePoint location="1224,457" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/addUser.do,addUser,/jsp/admin/user/addUser.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1698,1147" />
+      <AbsolutePoint location="1698,1267" />
+      <AbsolutePoint location="2260,1267" />
+      <AbsolutePoint location="2260,1327" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/userReports.do,showUserLog,/jsp/admin/reports/showUserLog.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="974,704" />
+      <AbsolutePoint location="974,739" />
+      <AbsolutePoint location="1465,739" />
+      <AbsolutePoint location="1465,804" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/userReports.do,logCheck,/jsp/admin/reports/logCheck.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="745,704" />
+      <AbsolutePoint location="745,769" />
+      <AbsolutePoint location="500,769" />
+      <AbsolutePoint location="500,804" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/userGroup.do,listUserName,/jsp/admin/userGroup/listUserName.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="863,247" />
+      <AbsolutePoint location="863,337" />
+      <AbsolutePoint location="1440,337" />
+      <AbsolutePoint location="1440,457" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

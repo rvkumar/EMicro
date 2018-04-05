@@ -1,0 +1,40 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{margin:0px 0px 0px 15px; font-family:Arial; font-size:12px; color:#000;}
+.welcome_title{font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:24px; text-transform:capitalize; color:#5b98c1;}
+.underline{width:100px; background-color:#a7c6dc; height:1px; margin-top:6px; margin-bottom:6px;}	
+#gallery_wrapper{ background-color:#efefef; border:#e0e0e0 1px solid; width:100%}
+.container {
+		  width: 95%;
+		  height: 320px;
+		  margin: 5px auto;
+		  background-color: #fff;
+		  padding:0px;
+		  overflow: scroll; /* showing scrollbars */
+	}
+	
+	::-webkit-scrollbar {
+		  width: 15px;
+	} /* this targets the default scrollbar (compulsory) */
+	
+	::-webkit-scrollbar-track {
+		  background-color: #b46868;
+	} /* the new scrollbar will have a flat appearance with the set background color */
+
+	::-webkit-scrollbar-thumb {
+		  background-color: rgba(0, 0, 0, 0.2); 
+	} /* this will style the thumb, ignoring the track */
+
+	::-webkit-scrollbar-button {
+		  background-color: #7c2929;
+	} /* optionally, you can style the top and the bottom buttons (left and right for horizontal bars) */
+
+	::-webkit-scrollbar-corner {
+		  background-color: black;
+	} /* if both the vertical and the horizontal bars appear, then perhaps the right bottom corner also needs to be styled */	
+	
+th{ width:80px; height:80px; border:#72a1c1 2px solid; border-radius:15px;}	
+
+.text{font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#333; line-height:20px; text-align:justify; padding-right:20px; padding-bottom:15px }	
+	

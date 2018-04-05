@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/mailInbox.do" location="0,0" dimension="256,96" />
+  <StrutsActivity path="/approvals.do" location="650,50" dimension="264,96" />
+  <StrutsActivity path="/jsp/main/mailInbox.jsp" location="49,196" dimension="157,51" />
+  <StrutsActivity path="/jsp/main/approvals.jsp" location="350,150" dimension="156,51" />
+  <StrutsActivity path="/jsp/main/mac.jsp" location="650,250" dimension="128,51" />
+  <StrutsActivity path="/jsp/main/mac.html" />
+  <StrutsTransition id="/approvals.do,mac,/jsp/main/mac.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="782,98" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/mailInbox.do,display,/jsp/main/mailInbox.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="64,96" />
+      <AbsolutePoint location="64,146" />
+      <AbsolutePoint location="88,146" />
+      <AbsolutePoint location="88,196" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/approvals.do,display,/jsp/main/approvals.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,111" />
+      <AbsolutePoint location="428,111" />
+      <AbsolutePoint location="428,150" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/jsp/main/mailInbox.jsp,null,/mailInbox.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="167,196" />
+      <AbsolutePoint location="167,146" />
+      <AbsolutePoint location="192,146" />
+      <AbsolutePoint location="192,96" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/jsp/main/approvals.jsp,null,/approvals.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="506,176" />
+      <AbsolutePoint location="782,176" />
+      <AbsolutePoint location="782,146" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/approvals.do,mac,/jsp/main/mac.html,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="782,98" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

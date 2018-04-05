@@ -1,0 +1,159 @@
+body {
+	margin: 0px;
+	padding: 0px;
+}
+#wrapper_head {
+	width: 100%;
+	padding: 0px;
+	height: 238px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	background-image: url(header_wrapper_BG.png);
+	background-repeat: repeat-x;
+}
+#heading_section {
+	padding: 0px;
+	height: 238px;
+	width: 1003px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	background-color: #0199ff;
+}
+
+#heading_logo {
+	float: left;
+	height: 126px;
+	width: 582px;
+	margin-top: 28px;
+	margin-left: 65px;
+}
+#client_login_button {
+	float: left;
+	height: 35px;
+	width: 150px;
+	margin-top: 67px;
+	margin-left: 165px;
+	line-height: 35px;
+	text-decoration: none;
+	font-family: Arial;
+	font-size: 12px;
+	color: #FFF;
+	font-weight: bold;
+	background-color: #005893;
+	background-image: url(client_login_button_curve_BG.png);
+	text-align: center;
+}
+
+#navigation_links_BG {
+	height: 42px;
+	width: 541px;
+	float: left;
+	margin-left: 18px;
+	background-image: url(navigation_links_BG.png);
+	background-repeat: repeat-x;
+	margin-top: 15px;
+	font-family: Arial;
+	line-height: 42px;
+	font-weight: bold;
+	color: #FFF;
+	text-decoration: none;
+	font-size: 12px;
+}
+
+#navigation_left_curve {
+	margin: 0px;
+	padding: 0px;
+	float: left;
+	height: 42px;
+	width: 10px;
+	background-image: url(navigation_links_left_curve.png);
+	background-repeat: no-repeat;
+}
+#links_part {
+	float: left;
+	width: 521px;
+	margin: 0px;
+	padding: 0px;
+}
+
+#navigation_right_curve {
+	margin: 0px;
+	padding: 0px;
+	float: left;
+	height: 42px;
+	width: 10px;
+	background-image: url(navigation_links_right_curve.png);
+	background-repeat: no-repeat;
+}
+
+#repeat_block_left {
+	float: left;
+	height: 67px;
+	width: 27px;
+	margin-top: 17px;
+}
+#white_curve_img_top {
+	float: left;
+	height: 33px;
+	width: 570px;
+	background-image: url(white_curve_img_top.png);
+	padding: 0px;
+	margin-top: -6px;
+	margin-left: 22px;
+	margin-right: 0px;
+}
+#mailer_list_BG {
+	float: left;
+	height: 126px;
+	width: 343px;
+	margin-top: -99px;
+	background-color:#FFF;
+}
+#mailer_list_top_curve {
+	background-image: url(mailer_list_top_curve.png);
+	margin: 0px;
+	padding: 0px;
+	float: left;
+	height: 16px;
+	width: 343px;
+}
+
+#repeat_block_right {
+	float: right;
+	height: 67px;
+	width: 27px;
+	margin-top: -40px;
+	background-image: url(repeat_block_right.png);
+}
+#wrapper_banner {
+	padding: 0px;
+	width: 100%;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	height: 392px;
+	background-color: #001828;
+}
+#baner_part {
+	background-image: url(banner_BG.png);
+	padding: 0px;
+	height: 392px;
+	width: 1003px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+}
+
+
+
+
+.clear
+{
+	clear:both;
+}

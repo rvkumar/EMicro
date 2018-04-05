@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/leave.do" location="0,149" dimension="215,88" />
+  <StrutsActivity path="/approvalLevels.do" location="950,50" dimension="259,88" />
+  <StrutsActivity path="/jsp/ess/leave/applyLeave.jsp" location="20,337" dimension="174,49" />
+  <StrutsActivity path="/jsp/admin/userGroup.jsp" location="32,0" dimension="151,49" />
+  <StrutsActivity path="/jsp/ess/leave/employeeLists.jsp" location="650,250" dimension="186,49" />
+  <StrutsActivity path="/jsp/ess/leave/approvalLeaveLevels.jsp" location="650,150" dimension="220,49" />
+  <StrutsActivity path="/jsp/ess/leave/userGroup.jsp" location="350,150" dimension="169,49" />
+  <StrutsActivity path="/jsp/ess/leave/displayEmplist.jsp" location="350,250" dimension="185,49" />
+  <StrutsActivity path="/ess.do" location="950,250" dimension="263,88" />
+  <StrutsActivity path="/employeepersonalinfo.do" location="350,350" dimension="293,88" />
+  <StrutsActivity path="/empofficial.do" location="950,450" dimension="285,88" />
+  <StrutsActivity path="/jsp/ess/joiningformality/joiningformality.jsp" location="50,550" dimension="239,49" />
+  <StrutsActivity path="/jsp/ess/joiningformality/joiningformalitycms.jsp" location="350,550" dimension="257,49" />
+  <StrutsActivity path="/jsp/ess/employeepersonalinfo/employeepersonalinfo.jsp" location="50,650" dimension="303,49" />
+  <StrutsActivity path="/jsp/ess/employeepersonalinfo/employeepersonalinfocms.jsp" location="650,650" dimension="321,49" />
+  <StrutsActivity path="/jsp/ess/employeeofficialinfo/empofficialinfo.jsp" location="50,750" dimension="257,49" />
+  <StrutsActivity path="/jsp/ess/employeeofficialinfo/empofficialinfocms.jsp" location="650,750" dimension="275,49" />
+  <StrutsTransition id="/jsp/ess/leave/approvalLeaveLevels.jsp,null,/approvalLevels.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="760,150" />
+      <AbsolutePoint location="760,94" />
+      <AbsolutePoint location="950,94" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/empofficial.do,display,/jsp/ess/employeeofficialinfo/empofficialinfo.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1122,538" />
+      <AbsolutePoint location="1122,874" />
+      <AbsolutePoint location="178,874" />
+      <AbsolutePoint location="178,799" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/approvalLevels.do,displayEmplist,/jsp/ess/leave/employeeLists.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1079,94" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/jsp/ess/employeepersonalinfo/employeepersonalinfo.jsp,null,/empofficial.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="201,650" />
+      <AbsolutePoint location="201,614" />
+      <AbsolutePoint location="1062,614" />
+      <AbsolutePoint location="1062,538" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/approvalLevels.do,display,/jsp/ess/leave/approvalLeaveLevels.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1079,138" />
+      <AbsolutePoint location="1079,174" />
+      <AbsolutePoint location="870,174" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/empofficial.do,display1,/jsp/ess/employeeofficialinfo/empofficialinfocms.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1092,538" />
+      <AbsolutePoint location="1092,774" />
+      <AbsolutePoint location="925,774" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/employeepersonalinfo.do,display,/jsp/ess/employeepersonalinfo/employeepersonalinfo.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="350,401" />
+      <AbsolutePoint location="334,401" />
+      <AbsolutePoint location="334,650" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/jsp/ess/joiningformality/joiningformality.jsp,null,/ess.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="239,550" />
+      <AbsolutePoint location="239,214" />
+      <AbsolutePoint location="1079,214" />
+      <AbsolutePoint location="1079,250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/jsp/ess/employeepersonalinfo/employeepersonalinfo.jsp,null,/employeepersonalinfo.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="304,650" />
+      <AbsolutePoint location="304,371" />
+      <AbsolutePoint location="350,371" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/leave.do,display,/jsp/ess/leave/applyLeave.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="107,237" />
+      <AbsolutePoint location="107,337" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ess.do,display1,/jsp/ess/joiningformality/joiningformalitycms.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,284" />
+      <AbsolutePoint location="915,284" />
+      <AbsolutePoint location="915,574" />
+      <AbsolutePoint location="607,574" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ess.do,display,/jsp/ess/joiningformality/joiningformality.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,314" />
+      <AbsolutePoint location="209,314" />
+      <AbsolutePoint location="209,550" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/employeepersonalinfo.do,display1,/jsp/ess/employeepersonalinfo/employeepersonalinfocms.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="643,394" />
+      <AbsolutePoint location="810,394" />
+      <AbsolutePoint location="810,650" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/jsp/admin/userGroup.jsp,null,/leave.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="77,49" />
+      <AbsolutePoint location="77,149" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<data-sources/>
+	<form-beans>
+		<form-bean name="mailInboxForm" type="com.microlabs.main.form.MailInboxForm"/>
+		<form-bean name="approvalsForm" type="com.microlabs.main.form.ApprovalsForm"/>
+		<form-bean name="contactsForm" type="com.microlabs.contacts.form.ContactsForm"/>
+		<form-bean name="personalizeForm" type="com.microlabs.main.form.PersonalizeForm"/>
+	</form-beans>
+	<global-exceptions>
+	<!-- <exception key="error.global.mesage"
+	      type="java.lang.NullPointerException"
+	      path="/jsp/ess/sessionExpiredLink.jsp"/> -->
+	</global-exceptions>
+	<global-forwards >
+  <forward name="displayiFrameSession" path="/jsp/ess/sessionExpiredLink.jsp"></forward>
+  </global-forwards>
+	<action-mappings>
+		<action attribute="personalizeForm" input="/jsp/main/personalize/changePassword.jsp" name="personalizeForm" parameter="method" path="/personalize" scope="request" type="com.microlabs.main.action.PersonalizeAction">
+			<forward name="passwordChange" path="/jsp/main/personalize/changePassword.jsp"/>
+		</action>
+		<action path="/mail" attribute="mailInboxForm" input="/jsp/main/main.jsp" name="mailInboxForm" parameter="method" scope="request" type="com.microlabs.main.action.MailInboxAction">
+			<forward name="displayMailHome" path="/jsp/main/mailHome.jsp"/>
+			<forward name="displayMailInbox" path="/jsp/main/mailInbox.jsp"/>
+			<forward name="displaySentItems" path="/jsp/main/sentMail.jsp"/>
+			<forward name="displayDeleted" path="/jsp/main/trashMail.jsp"/>
+			<forward name="displayMailNew" path="/jsp/main/mailNew.jsp"/>
+			<forward name="displaySelectedMail" path="/jsp/main/sentMail.jsp"/>
+			<forward name="ajaxFileUpload" path="/jsp/main/fileUpload.jsp"/>
+			<forward name="displayMailDraft" path="/jsp/main/mailDraft.jsp"/>
+			<forward name="searchUser" path="/jsp/main/searchUsers.jsp"/>
+		</action>
+		<action path="/approvals"
+		 attribute="approvalsForm"
+		 input="/jsp/main/approvals.jsp"
+		 name="approvalsForm"
+		 parameter="method"
+		 scope="request"
+		  type="com.microlabs.main.action.ApprovalsAction">
+			<forward name="display" path="/jsp/main/approvals.jsp"/>
+			<forward name="mac" path="/jsp/main/mac.html"/>
+			<forward name="displayRequest" path="/jsp/main/allApproval.jsp"/>
+			<forward name="displayPendingRequest" path="approvals.do?method=displayPending" redirect="true"/>
+			<forward name="leaveDetails" path="/jsp/main/approveDetails/LeaveDetails.jsp"/>
+			<forward name="approvePage" path="/jsp/main/approveDetails/approvl.jsp"/>
+			<forward name="ROHDetails" path="/jsp/main/approveDetails/ROH.jsp"/>
+			<forward name="ROH_Account" path="/jsp/main/approveDetails/ROH_Accounts.jsp"/>
+			<forward name="ROH_Creator" path="/jsp/main/approveDetails/ROH_Creator.jsp"/>
+			<forward name="VERPDetails" path="/jsp/main/approveDetails/VERP.jsp"/>
+			<forward name="VERP_Account" path="/jsp/main/approveDetails/VERP_Accounts.jsp"/>
+			<forward name="VERP_Creator" path="/jsp/main/approveDetails/VERP_Creator.jsp"/>
+			<forward name="finishedProduct" path="/jsp/main/approveDetails/FinishedProducts.jsp"/>
+			<forward name="finishedProduct_Account" path="/jsp/main/approveDetails/FinishedProducts_Accounts.jsp"/>
+			<forward name="finishedProduct_Creator" path="/jsp/main/approveDetails/FinishedProducts_Creator.jsp"/>
+			<forward name="HALBDetails" path="/jsp/main/approveDetails/SemiFinished.jsp"/>
+			<forward name="HALB_Account" path="/jsp/main/approveDetails/SemiFinished_Account.jsp"/>
+			<forward name="HALB_Creator" path="/jsp/main/approveDetails/SemiFinished_Creator.jsp"/>
+			<forward name="ZPSRDetails" path="/jsp/main/approveDetails/ZPSR.jsp"/>
+			<forward name="ZPSR_Account" path="/jsp/main/approveDetails/ZPSR_Account.jsp"/>
+			<forward name="ZPSR_Creator" path="/jsp/main/approveDetails/ZPSR_Creator.jsp"/>
+			<forward name="ZPPCDetails" path="/jsp/main/approveDetails/ZPPC.jsp"/>
+			<forward name="ZPPC_Account" path="/jsp/main/approveDetails/ZPPC_Accounts.jsp"/>
+			<forward name="ZPPC_Creator" path="/jsp/main/approveDetails/ZPPC_Creator.jsp"/>
+			<forward name="GeneralMaterial" path="/jsp/main/approveDetails/GeneralMaterial.jsp"/>
+			<forward name="GeneralMaterial_Account" path="/jsp/main/approveDetails/GeneralMaterial_Accounts.jsp"/>
+			<forward name="GeneralMaterial_Creator" path="/jsp/main/approveDetails/GeneralMaterial_Creator.jsp"/>
+			<forward name="ServiceMaster" path="/jsp/main/approveDetails/Service Master/serviceMasterRequest.jsp"/>
+			<forward name="ServiceMaster_Account" path="/jsp/main/approveDetails/Service Master/serviceMasterRequest_Accounts.jsp"/>
+			<forward name="ServiceMaster_Creator" path="/jsp/main/approveDetails/Service Master/serviceMasterRequest_Creator.jsp"/>
+			<forward name="CodeExtention" path="/jsp/main/approveDetails/codeExtention/MaterialExtension.jsp"/>
+			<forward name="CodeExtention_Creator" path="/jsp/main/approveDetails/codeExtention/MaterialExtension_Creator.jsp"/>
+			<forward name="VendorMaster" path="/jsp/main/approveDetails/vendor Master/vendorMasterRequest.jsp"/>
+			<forward name="VendorMaster_Account" path="/jsp/main/approveDetails/vendor Master/vendorMasterRequest_Accounts.jsp"/>
+			<forward name="VendorMaster_Creator" path="/jsp/main/approveDetails/vendor Master/vendorMasterRequest_Creator.jsp"/>
+				<forward name="VendorMaster_State" path="/jsp/main/approveDetails/vendor Master/vendorMasterRequest_State.jsp"/>
+				<forward name="customerMaster" path="/jsp/main/approveDetails/Customer Master/CustomerMaster.jsp"/>
+			<forward name="customerMaster_Account" path="/jsp/main/approveDetails/Customer Master/CustomerMaster_Accounts.jsp"/>
+			<forward name="customerMaster_Creator" path="/jsp/main/approveDetails/Customer Master/CustomerMaster_Creator.jsp"/>
+			<forward name="ondutyDetails" path="/jsp/main/approveDetails/OnDuty/applyOnDuty.jsp"/>
+			<forward name="PermissionDetails" path="/jsp/main/approveDetails/Permission/Permission.jsp"/>
+			<forward name="pendingLeaves" path="/jsp/main/approveDetails/PendingLeaves.jsp"/>
+			<forward name="pendingonduty" path="/jsp/main/approveDetails/PendingOnduty.jsp"/>
+			<forward name="leaveDetails1" path="/jsp/main/approveDetails/LeaveMailDetails.jsp"/>
+			<forward name="ondutyDetails1" path="/jsp/main/approveDetails/OnDuty/OndutyMailDetails.jsp"/>
+			<forward name="permissionDetails1" path="/jsp/main/approveDetails/Permission/PermissionMailDetails.jsp"/>
+			<forward name="AduserCreationformENG" path="/jsp/main/approveDetails/HelpDesk/AdUserCreationENG.jsp"/>
+			<forward name="AduserCreationformAppr" path="/jsp/main/approveDetails/HelpDesk/AdUserCreationAppr.jsp"/>
+			<forward name="AduserDeletionformENG" path="/jsp/main/approveDetails/HelpDesk/AdUserDeletionENG.jsp"/>
+			<forward name="AduserDeletionformAppr" path="/jsp/main/approveDetails/HelpDesk/AdUserDeletionAppr.jsp"/>
+		    <forward name="AduserTransferformENG" path="/jsp/main/approveDetails/HelpDesk/AdUserTransferENG.jsp"/>
+			<forward name="AduserTransferformAppr" path="/jsp/main/approveDetails/HelpDesk/AdUserTransferAppr.jsp"/>
+			 <forward name="LotusIDCreationENG" path="/jsp/main/approveDetails/HelpDesk/LotusIdCreationENG.jsp"/>
+			<forward name="LotusIDCreationAppr" path="/jsp/main/approveDetails/HelpDesk/LotusIdCreationAppr.jsp"/>
+			<forward name="LotusIDChangeENG" path="/jsp/main/approveDetails/HelpDesk/LotusIdChangeENG.jsp"/>
+			<forward name="LotusIDChangeAppr" path="/jsp/main/approveDetails/HelpDesk/LotusIdChangeAppr.jsp"/>
+			<forward name="LotusIDDeleteENG" path="/jsp/main/approveDetails/HelpDesk/LotusIdDeletionENG.jsp"/>
+			<forward name="LotusIDDeleteAppr" path="/jsp/main/approveDetails/HelpDesk/LotusIdDeletionAppr.jsp"/>
+			<forward name="InternetENG" path="/jsp/main/approveDetails/HelpDesk/InternetAccessENG.jsp"/>
+			<forward name="InternetAppr" path="/jsp/main/approveDetails/HelpDesk/InternetAccessAppr.jsp"/>
+			<forward name="externaldrivesENG" path="/jsp/main/approveDetails/HelpDesk/ExternalDrivesENG.jsp"/>
+			<forward name="externaldrivesAppr" path="/jsp/main/approveDetails/HelpDesk/ExternalDrivesAppr.jsp"/>
+			<forward name="ftpENG" path="/jsp/main/approveDetails/HelpDesk/FTPAccessENG.jsp"/>
+			<forward name="ftpAppr" path="/jsp/main/approveDetails/HelpDesk/FTPAccessAppr.jsp"/>
+			<forward name="folderENG" path="/jsp/main/approveDetails/HelpDesk/FolderAccessENG.jsp"/>
+			<forward name="folderAppr" path="/jsp/main/approveDetails/HelpDesk/FolderAccessAppr.jsp"/>
+			<forward name="NewItassetformAppr" path="/jsp/main/approveDetails/HelpDesk/NewITAssetAppr.jsp"/>
+			<forward name="NewItassetformENG" path="/jsp/main/approveDetails/HelpDesk/NewITAssetENG.jsp"/>
+		    <forward name="NewItspareformAppr" path="/jsp/main/approveDetails/HelpDesk/NewITSpareAppr.jsp"/>
+			<forward name="NewItspareformENG" path="/jsp/main/approveDetails/HelpDesk/NewITSpareENG.jsp"/>
+			<forward name="VCRoom" path="/jsp/main/approveDetails/VCRoom/VCRoom.jsp"/>
+            <forward name="checkVCAvail" path="/jsp/main/approveDetails/VCRoom/CheckVCAvail.jsp"/>
+            <forward name="sapitissueuserview" path="/jsp/main/approveDetails/HelpDesk/sapitissueuserview.jsp"/>
+             <forward name="Compoff" path="/jsp/main/approveDetails/CompoffDetails.jsp"/>
+             <forward name="OT" path="/jsp/main/approveDetails/OTDetails.jsp"/>
+               <forward name="ITmaildetails" path="/jsp/main/approveDetails/ITRequestMailDetails.jsp"/>
+                 <forward name="Hrquery" path="/jsp/main/approveDetails/HRQueryDetails.jsp"/>
+                   <forward name="travelRequest" path="/jsp/main/approveDetails/TravelDesk/viewUsertravelRequest.jsp"/>
+		</action>
+		
+		<action attribute="mailInboxForm" path="/sendMail" input="/jsp/main/mainNew.jsp" name="mailInboxForm" parameter="method" scope="request" type="com.microlabs.main.action.MailInboxAction">
+			<forward name="displayMailSent" path="mail.do?method=displayInboxMail" redirect="true"/>
+		</action>
+		<action attribute="mailInboxForm" path="/saveMail" input="/jsp/main/main.jsp" name="mailInboxForm" parameter="method" scope="request" type="com.microlabs.main.action.MailInboxAction">
+			<forward name="SavedAsDraft" path="/jsp/main/mailNew.jsp"/>
+		</action>
+		<action attribute="mailInboxForm" path="/deleteMail" input="/jsp/main/main.jsp" name="mailInboxForm" parameter="method" scope="request" type="com.microlabs.main.action.MailInboxAction">
+			<forward name="displayInboxMailRemove" path="mail.do?method=displayInboxMail" redirect="true"/>
+			<forward name="displaySentMailRemove" path="mail.do?method=displaySentMail" redirect="true"/>
+			<forward name="displayDraftMailRemove" path="mail.do?method=displayDraftMail" redirect="true"/>
+			<forward name="displayTrashMailRemove" path="mail.do?method=displayDeletedMail" redirect="true"/>
+		</action>
+		<action attribute="contactsForm" input="/jsp/main/contacts/contacts.jsp" name="contactsForm" parameter="method" path="/contacts" scope="request" type="com.microlabs.contacts.action.ContactsAction">
+			<forward name="searchContactsForm" path="/jsp/main/contacts/contacts.jsp"/>
+			<forward name="empSearch" path="/jsp/template/EmployeeSearch.jsp"/>
+			<forward name="empoffInfo" path="/jsp/main/contacts/offcInfo.jsp"/>
+		   <forward name="empoffInfo2" path="/jsp/template/EmployeeSearchView.jsp"/>
+		</action>
+	</action-mappings>
+</struts-config>

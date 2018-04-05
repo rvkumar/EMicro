@@ -1,0 +1,8 @@
+#SAP_DESTINATION config
+#Fri Apr 28 15:24:37 IST 2017
+jco.client.lang=EN
+jco.client.client=900
+jco.client.passwd=Micro@1
+jco.client.user=91524
+jco.client.sysnr=00
+jco.client.ashost=192.168.1.2

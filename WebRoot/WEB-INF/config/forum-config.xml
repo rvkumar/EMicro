@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+  <data-sources/>
+  <form-beans>
+		<form-bean name="forumForm" type="com.microlabs.forum.form.ForumForm" />
+		
+	</form-beans>
+	<global-exceptions>
+	<!-- <exception key="error.global.mesage"
+	      type="java.lang.NullPointerException"
+	      path="/jsp/ess/sessionExpiredLink.jsp"/> -->
+	</global-exceptions>
+	<global-forwards/>
+	<action-mappings>
+		<action 
+		path="/forum" 
+		attribute="forumForm" 
+		input="/jsp/main/main.jsp" 
+		name="forumForm" 
+		parameter="method" 
+		scope="request" 
+		type="com.microlabs.forum.action.ForumAction">
+			<forward name="display" path="/jsp/forum/forum.jsp"/>
+		     <forward name="display1" path="/jsp/forum/forumCMS.jsp"/>
+		     <forward name="displayCMS1" path="/jsp/forum/forumIframecms.jsp"/>
+	        <forward name="displayEmergency" path="/jsp/forum/EmergencyNos.html"/>
+	        <forward name="displayFirstAid" path="/jsp/forum/FirstAid.html"/>
+	        <forward name="displayHealth" path="/jsp/forum/health.html"/>
+	        <forward name="displayGreenTips" path="/jsp/forum/green_tips.html"/>
+	        <forward name="displayRecipe" path="/jsp/forum/receipe.html"/>
+	        <forward name="displayQuickFacts" path="/jsp/forum/quick_facts.html"/>
+	              <forward name="displayMEDITIMES" path="/jsp/forum/displayMEDI.jsp"/>
+		</action>
+		
+  </action-mappings>
+
+</struts-config>

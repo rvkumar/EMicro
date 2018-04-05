@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<data-sources/>
+	<form-beans>
+        <form-bean name="itHelpdeskForm" type="com.microlabs.it.form.HelpDeskForm"/>
+	 	<form-bean name="issuesForm" type="com.microlabs.it.form.IssuesForm"/>
+	</form-beans>
+ <global-forwards >
+  <forward name="displayiFrameSession" path="/jsp/ess/sessionExpiredLink.jsp"></forward>
+  </global-forwards>
+<action-mappings>
+	
+	<action attribute="issuesForm" 
+		input="/jsp/main/feedBack/feedBack.jsp"
+		name="issuesForm" parameter="method"
+		path="/itIsssues"
+		scope="request"
+	    type="com.microlabs.it.action.IssuesAction">
+	    	<forward name="displayIssues"  path="/jsp/it/HelpDesk/Issues/Issues.jsp"/>
+     	<forward name="newincidentform"  path="/jsp/it/HelpDesk/Issues/newincident.jsp"/>
+     	<forward name="subcategoryajax"  path="/jsp/it/HelpDesk/subcategoryAjax.jsp"/>
+     	<forward name="techniciansAjax"  path="/jsp/it/HelpDesk/Issues/techniciansAjax.jsp"/>
+     	<forward name="pickupSelectedIssue"  path="/jsp/it/HelpDesk/Issues/IssueDetails.jsp"/>
+     	<forward name="displayITEnggs"  path="/jsp/it/HelpDesk/Issues/displayUsersList.jsp"/>
+     	<forward name="editIssueDetails"  path="/jsp/it/HelpDesk/Issues/editIssueDetails.jsp"/>
+     	<forward name="ReqNoStatusAjax"  path="/jsp/it/HelpDesk/Issues/ReqNoStatusAjax.jsp"/>
+     	<forward name="sapuseridmanagement"  path="/jsp/it/HelpDesk/Issues/sapuseridmanagement.jsp"/>
+     	<forward name="saprequestform"  path="/jsp/it/HelpDesk/Issues/saprequestform.jsp"/>
+     		<forward name="sapDocumentCancellation"  path="/jsp/it/HelpDesk/Issues/sapDocumentCancellation.jsp"/>
+     	<forward name="sapnewincident"  path="/jsp/it/HelpDesk/Issues/sapnewincident.jsp"/>
+     	<forward name="displayApprovers"  path="/jsp/it/HelpDesk/Issues/SapApprListAjax.jsp"/>
+     	<forward name="displaySapIssues"  path="/jsp/it/HelpDesk/Issues/SapIssues.jsp"/>
+     	
+		</action>
+		
+	<action attribute="itHelpdeskForm" 
+		input="/jsp/main/feedBack/feedBack.jsp"
+		name="itHelpdeskForm" parameter="method"
+		path="/itHelpdesk"
+		scope="request"
+	    type="com.microlabs.it.action.HelpDeskAction">
+		<forward name="displayform"  path="/jsp/it/HelpDesk/displayItRequest.jsp"/>
+     	<forward name="displayAduserCreationform"  path="/jsp/it/HelpDesk/ITServices/AdUserCreation.jsp"/>
+    	<forward name="displayAduserDeletionform"  path="/jsp/it/HelpDesk/ITServices/AdUserDeletion.jsp"/>  	
+    	<forward name="displayAduserTransferform"  path="/jsp/it/HelpDesk/ITServices/AdUserTransfer.jsp"/> 
+     	<forward name="displayLotusIDCreationform"  path="/jsp/it/HelpDesk/ITServices/LotusIdCreation.jsp"/>
+     	<forward name="displayLotusIDChangeform"  path="/jsp/it/HelpDesk/ITServices/LotusIdChange.jsp"/>
+     	<forward name="displayLotusIDDeletionform"  path="/jsp/it/HelpDesk/ITServices/LotusIdDeletion.jsp"/>
+     	<forward name="displayInternetAccessform"  path="/jsp/it/HelpDesk/ITServices/InternetAccess.jsp"/>
+     	<forward name="displayexternaldrivesform"  path="/jsp/it/HelpDesk/ITServices/ExternalDrives.jsp"/>
+     	<forward name="displayFtpAccessform"  path="/jsp/it/HelpDesk/ITServices/FTPAccess.jsp"/>
+     	<forward name="displayFolderAccessform"  path="/jsp/it/HelpDesk/ITServices/FolderAccess.jsp"/>
+     	<forward name="displayNewITAssetform"  path="/jsp/it/HelpDesk/ITServices/NewItAsset.jsp"/>
+     	<forward name="displayNewITSpareform"  path="/jsp/it/HelpDesk/ITServices/NewItSpare.jsp"/>
+     	<forward name="displaytransportRequestform"  path="/jsp/it/HelpDesk/ITServices/TransportRequest.jsp"/>
+     	<forward name="searchemployee"  path="/jsp/it/HelpDesk/searchemployee.jsp"/>
+     	
+	<forward name="myrequest"  path="/jsp/it/HelpDesk/Myrequest/myrequestlist.jsp"/>
+     	<forward name="viewAduserCreationform"  path="/jsp/it/HelpDesk/Myrequest/ITServices/viewAdUserCreation.jsp"/>
+     	<forward name="viewAduserDeletionform"  path="/jsp/it/HelpDesk/Myrequest/ITServices/viewAdUserDeletion.jsp"/>
+        <forward name="viewAduserTransferform"  path="/jsp/it/HelpDesk/Myrequest/ITServices/viewAdUserTransfer.jsp"/>
+     	<forward name="viewLotusIDCreationform"  path="/jsp/it/HelpDesk/Myrequest/ITServices/viewLotusIdCreation.jsp"/>
+     	<forward name="viewLotusIDChangeform"  path="/jsp/it/HelpDesk/Myrequest/ITServices/viewLotusIdChange.jsp"/>
+     	<forward name="viewLotusIDDeletionform"  path="/jsp/it/HelpDesk/Myrequest/ITServices/viewLotusIdDeletion.jsp"/>
+     	<forward name="viewInternetAccessform"  path="/jsp/it/HelpDesk/Myrequest/ITServices/viewInternetAccess.jsp"/>
+     	<forward name="viewexternaldrivesform"  path="/jsp/it/HelpDesk/Myrequest/ITServices/viewExternalDrives.jsp"/>
+     	<forward name="viewFtpAccessform"  path="/jsp/it/HelpDesk/Myrequest/ITServices/viewFTPAccess.jsp"/>
+     	<forward name="viewFolderAccessform"  path="/jsp/it/HelpDesk/Myrequest/ITServices/viewFolderAccess.jsp"/>
+     		<forward name="viewNewITAssetform"  path="/jsp/it/HelpDesk/Myrequest/ITServices/viewNewITAsset.jsp"/>
+     		<forward name="viewNewITSparesform"  path="/jsp/it/HelpDesk/Myrequest/ITServices/viewNewSpareAsset.jsp"/>
+     			<forward name="viewNewSapRequestform"  path="/jsp/it/HelpDesk/Myrequest/ITServices/viewsapitissueuser.jsp"/>
+     			<forward name="pickupSelectedIssue" path="/jsp/it/HelpDesk/Myrequest/ITServices/IssueDetails.jsp"/>
+     			<forward name="subfilterAjax" path="/jsp/it/HelpDesk/Myrequest/ITServices/subfilterAjax.jsp"/>
+     		
+     	<forward name="displayIssues"  path="/jsp/it/HelpDesk/Issues/Issues.jsp"/>
+     	<forward name="newincidentform"  path="/jsp/it/HelpDesk/Issues/newincident.jsp"/>
+     	<forward name="subcategoryajax"  path="/jsp/it/HelpDesk/subcategoryAjax.jsp"/>
+		</action>
+	
+	
+	</action-mappings>
+	<message-resources parameter="com.yourcompany.struts.ApplicationResources"/>
+</struts-config>

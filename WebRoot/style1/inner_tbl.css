@@ -1,0 +1,370 @@
+
+
+
+
+
+
+
+
+
+#mytable {
+
+	padding: 0;
+
+	margin: 0;
+
+	background-color:#FFF;
+
+	margin-right:auto;
+
+	margin-left:auto;
+
+}
+
+
+
+#mytable1 {
+
+	width: 800px;
+
+	padding: 0;
+
+	margin: 0;
+
+	background-color:#FFF;
+	
+
+}
+
+#mytable2 {
+
+	width: 700px;
+
+	padding: 6px 6px 6px 12px;
+
+	margin: 0;
+
+font-family:Arial;
+
+	color:#333;
+
+	font-size:12px;
+	text-transform: uppercase;
+
+	text-align: left;
+
+}
+
+#myslidemenu {
+
+	width: 100%;
+
+	height:30px;
+
+	background-image:url(../images/links-BG.png);
+
+	background-repeat:repeat-x;
+
+
+
+}
+
+
+
+
+#mytable1 th {
+
+	font: bold 12px "Arial", Verdana, Arial, Helvetica, sans-serif;
+
+	color:#FFF;
+
+	border-right: 1px solid #C1DAD7;
+
+	border-left: 1px solid #C1DAD7;
+
+	border-bottom: 1px solid #C1DAD7;
+
+	border-top: 1px solid #C1DAD7;
+
+	letter-spacing: 2px;
+text-transform: uppercase;
+
+
+	text-align: left;
+
+	padding: 6px 6px 6px 12px;
+
+	background: #39a2f1 url(../images/td_bg.gif) no-repeat;
+
+}
+
+
+
+#mytable1 th.nobg {
+
+	border-top: 0;
+
+	border-left: 0;
+
+	border-right: 1px solid #C1DAD7;
+
+	background: none;
+
+}
+
+
+
+#mytable1 td {
+	font: bold 12px "Arial", Verdana, Arial, Helvetica, sans-serif;
+	
+height:13px;
+	border-right: 1px solid #C1DAD7;
+	border-left: 1px solid #C1DAD7;
+
+	border-bottom: 1px solid #C1DAD7;
+
+	padding: 6px 6px 6px 12px;
+	color: #4f6b72;
+
+}
+
+#mytable1 td.lft{
+
+	border-left: 1px solid #C1DAD7;
+
+	font-family:Arial;
+
+	color:#333;
+
+	font-size:12px;
+
+}
+
+#mytable1 td.top{
+
+	border-top: 1px solid #C1DAD7;
+
+}
+
+
+
+#mytable1 td.lft_top{
+
+	border-left: 1px solid #C1DAD7;
+
+	border-top: 1px solid #C1DAD7;
+
+}
+
+#mytable1 td.alt {
+
+	background: #F5FAFA;
+
+	color: #797268;
+
+}
+
+
+
+#mytable1 th.spec {
+
+	border-left: 1px solid #C1DAD7;
+
+	border-top: 0;
+
+	background: #fff url(../images/bullet1.gif) no-repeat;
+
+	font: bold 10px "Arial", Verdana, Arial, Helvetica, sans-serif;
+
+}
+
+
+
+#mytable1 th.specalt {
+
+	border-left: 1px solid #C1DAD7;
+
+	border-top: 0;
+
+	background: #d1e8f4 url(../images/bullet1.gif) no-repeat;
+
+	font: bold 10px " Arial", Verdana, Arial, Helvetica, sans-serif;
+
+	color: #797268;
+	
+
+	
+
+	
+
+}
+
+
+#in_tbl td{
+
+	border:none;	
+
+}
+
+#txt1{
+
+	font-weight:bold;	
+
+}
+
+#ot_bdr{
+
+	border-right: 7px solid #4372b7;
+
+	border-left: 7px solid #4372b7;
+
+	border-bottom: 7px solid #4372b7;
+
+	padding: 6px 6px 6px 12px;
+
+	height:100%;
+
+	height:auto;
+
+}
+
+html, body, #cont {
+
+	height:100%;
+
+    width: 100%;
+
+	padding:0px;
+
+	margin:0px;
+
+}
+
+#mytable1 srchpg_txt{
+
+	width:40%;
+
+	float:left;
+
+	text-align:right;
+
+	margin-right:20px;
+
+}
+
+#sb1{
+
+	padding-top:20px;	
+
+}
+
+#sb2{
+
+	padding-top:20px;	
+
+}
+
+#srch_btn{
+
+	width:110px;
+
+	height:43px;
+
+	margin-left:45%;
+
+	padding-top:20px;
+
+	cursor:pointer;
+
+}
+
+#mytable1 sear_si{
+
+	float:left;
+
+	color:#F60;	
+
+}
+
+#mytable1 sear_name{
+
+	float:left;
+
+	color:#006;
+
+	padding-left:10px;
+
+}
+
+#mytable1 spcr{
+
+	clear:both;
+
+	height:5px;	
+
+}
+
+#mytable1 txt2{
+
+	color:#06C;
+
+	font-size:14px;
+
+	font-weight:bold;
+
+	font-family:Tahoma, Geneva, sans-serif;
+
+}
+
+#sear_bar{
+
+	background-image:url(../images/sear.png);
+
+	background-repeat:no-repeat;
+
+	background-position:center;
+
+	color:#333;
+
+	font-weight:bold;
+
+	height:236px;
+
+	vertical-align:middle;
+
+}
+
+
+#newTableView{
+	border-collapse:collapse;
+	font: 14px "Arial", Verdana, Arial, Helvetica, sans-serif;
+	padding: 6px 6px 6px 12px;
+	text-align:left;
+	border-left: 0px;
+}
+
+.thView{
+	text-align: left;
+	font-weight:normal;
+}
+
+.tableEvenTR{
+	background-color: #eff7ff;
+	height: 3ex;
+}
+
+.tableOddTR{
+	background-color: #ffffff;
+	height: 3ex;
+}
+
+.tableLink{
+	color: #127BCA;
+cursor: pointer;
+}
+.readTR{
+	font-weight: normal;
+}
+.unreadTR{
+	font-weight: bold;
+}

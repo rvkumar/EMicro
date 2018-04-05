@@ -1,0 +1,125 @@
+@charset "utf-8";
+/* CSS Document */
+body{margin:0px;}
+
+.wrapper_left{
+	width:237px;
+	height:0px;
+	float:left;
+	display:inline-table;
+}
+
+.left-blocks {
+	width:auto;
+	height:0px;
+	float:left;
+}
+
+
+.mail_main{
+	width:237px;
+	height:27px;
+	float: left;
+	margin-bottom: 3px;
+		display:inline-block;
+		text-decoration: none;
+		font-family:Arial, Helvetica, sans-serif;
+		font-size:12px;
+		text-transform:uppercase;
+		color:#333;
+	}
+.mail{width:237px;
+		height:26px;
+		background:url(../images/left_menu/1.jpg); background-repeat:no-repeat;
+		padding:.4em 0em 0em .5em;
+		float: left;
+		display:inline-block;
+		cursor:pointer;
+		text-decoration: none;
+		font-family:Arial, Helvetica, sans-serif;
+		font-size:12px;
+		text-transform:uppercase;
+		color:#333;}
+		
+
+		
+.mail:hover{background:url(../images/left_menu/2.jpg); background-repeat:no-repeat;
+		width:237px;
+		height:26px;
+		float: left;
+		display:inline-block;
+		cursor:pointer;
+		text-decoration: none;
+		font-family:Arial, Helvetica, sans-serif;
+		font-size:12px;
+		text-transform:uppercase;
+		color:#fff;}		
+	
+		
+.mail:active {background:url(../images/left_menu/3.jpg);
+		width:237px;	
+		height:26px;
+		background-repeat:no-repeat;
+		text-decoration: none;
+		font-family:Arial, Helvetica, sans-serif;
+		font-size:11px;
+		text-transform:uppercase;
+		color:#fff;}
+				
+.submenubg{background:url(../images/left_menu/submenu_bgpx.jpg); background-repeat:repeat-x; width:224px; margin-left:6px;
+			border-right-width: 1px;
+			border-left-width: 1px;			
+			border-right-style: solid;			
+			border-left-style: solid;			
+			border-right-color: #c5c5c5;			
+			border-left-color: #c5c5c5; }
+
+
+ul{
+	font-family:Arial;
+	text-transform:capitalize;
+	height:auto;
+	font-size:13px;
+	padding:8px 0px 8px 25px;
+	color:#000000;
+	border-bottom:dotted 1px;
+	border-color: #CCCCCC;
+	margin:0px;}
+	
+ul a{
+	font-family:Arial;
+	text-transform:capitalize;
+	height:auto;
+	font-size:13px;
+	color:#000000;
+	margin:0px;}
+	
+ul a:hover{
+	font-family:Arial;
+	text-transform:capitalize;
+	height:auto;
+	font-size:13px;
+	color:#39F;
+	margin:0px;}		
+/* MENU CSS ENDS */
+.cal_wrapper{border:#c7c7c7 1px solid}
+.calender{background-color:#eeeeee; border:1px #FFF solid; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-weight:bold; text-align:center; font-size:11px;}
+.calender_number td{ background-color:#eeeeee;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; 
+	font-weight:normal; font-size:11px; 
+	text-align:center;
+	color:#3b3c3c; 
+	border:#fff .1em solid; }
+td{width:20px;}	
+th{width:20px; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-weight:bold; text-align:center; font-size:11px; background-color:#FFF; border:#eeeeee 1px solid; color:#666;}
+.calender_holiday, #holi{font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-weight:bold;text-align:center;  font-size:12px; background-color:#fff; border:#eeeeee 1px solid; color:#C00;}
+
+select{background-color:#f7f7f7; border:1px #FFF solid; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-weight:bold; text-align:center; font-size:11px; border:#eeeeee 1px solid;;}
+
+
+.test{background:url(../left_menu/1.jpg); width:237px;	
+		height:26px; float:left;}
+.test a{background:url(../left_menu/1.jpg)}
+.test a:hover{background:url(../left_menu/2.jpg)}
+.test:active{background:url(../left_menu/3.jpg)}
+

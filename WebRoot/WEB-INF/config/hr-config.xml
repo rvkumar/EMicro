@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<data-sources/>
+	<form-beans>
+	      <form-bean name="hrReportForm" type="com.microlabs.hr.form.HRReportForm"/>
+		<form-bean name="sapAttendenceForm" type="com.microlabs.hr.form.SAPAttendenceForm" />
+		<form-bean name="hrLeaveForm" type="com.microlabs.hr.form.HRLeaveForm"/>
+		 <form-bean name="hrApprovalForm" type="com.microlabs.hr.form.HRApprovalForm"/>
+		 <form-bean name="incomeTaxReqForm" type="com.microlabs.hr.form.IncomeTaxReqForm"/>
+		 <form-bean name="updateLeaveBalForm" type="com.microlabs.hr.form.UpdateLeaveBalForm"/>
+		
+	</form-beans>
+	 <global-exceptions>
+	<!-- <exception key="error.global.mesage"
+	      type="java.lang.NullPointerException"
+	      path="/jsp/ess/sessionExpiredLink.jsp"/> -->
+	</global-exceptions>
+ <global-forwards >
+  <forward name="displayiFrameSession" path="/jsp/ess/sessionExpiredLink.jsp"></forward>
+  </global-forwards>
+	<action-mappings>
+	
+		<action attribute="updateLeaveBalForm" 
+		input="/jsp/main/feedBack/feedBack.jsp"
+		name="updateLeaveBalForm" parameter="method"
+		 path="/updateLeaveBal"
+		scope="request"
+	 type="com.microlabs.hr.action.UpdateLeaveBalAction">
+		<forward name="display"  path="/jsp/hr/UpdateLeave/display.jsp"/>
+		<forward name="calculateDays"  path="/jsp/hr/UpdateLeave/leaveCalculateDaysAjax.jsp"/>
+		</action>
+		
+		
+		<action attribute="incomeTaxReqForm" 
+		input="/jsp/main/feedBack/feedBack.jsp"
+		name="incomeTaxReqForm" parameter="method"
+		 path="/incomeTaxReq"
+		scope="request"
+	 type="com.microlabs.hr.action.IncomeTaxReqAction">
+		<forward name="display"  path="/jsp/hr/IncomeTaxRequest/approvals.jsp"/>
+		<forward name="investment"  path="/jsp/hr/IncomeTaxRequest/investment.jsp"/>
+		<forward name="claimTRLP"  path="/jsp/hr/IncomeTaxRequest/claimTRLP.jsp"/>
+		<forward name="previousIncome"  path="/jsp/hr/IncomeTaxRequest/PreviousIncome.jsp"/>
+		<forward name="externalIncome"  path="/jsp/hr/IncomeTaxRequest/ExternalIncome.jsp"/>
+		<forward name="ltaIncome"  path="/jsp/hr/IncomeTaxRequest/LTAIncome.jsp"/>
+		<forward name="medicalIncome"  path="/jsp/hr/IncomeTaxRequest/medicalbillappr.jsp"/>
+		<forward name="displayReport"  path="/jsp/hr/IncomeTaxRequest/report.jsp"/>
+		<forward name="displayStatusReport"  path="/jsp/hr/IncomeTaxRequest/exportStatusreport.jsp"/>
+		</action>
+	
+	<action attribute="hrApprovalForm" 
+		input="/jsp/main/feedBack/feedBack.jsp"
+		name="hrApprovalForm" parameter="method"
+		 path="/hrApprove"
+		scope="request"
+	 type="com.microlabs.hr.action.HRApprovalAction">
+		<forward name="displayPending"  path="/jsp/hr/ApplyForOthers/Approvals/display.jsp"/>
+        <forward name="displayrecords"  path="/jsp/hr/ApplyForOthers/Approvals/displayAllPending.jsp"/>
+        <forward name="displaycancelRequest"  path="/jsp/hr/ApplyForOthers/Approvals/viewcancelreqst.jsp"/>
+        <forward name="searchemployee"  path="/jsp/hr/ApplyForOthers/Approvals/searchemployee.jsp"/>
+        <forward name="displayondutycancelRequest"  path="/jsp/hr/ApplyForOthers/Approvals/viewondutycancel.jsp"/>
+		<forward name="displaycancelrecords"  path="/jsp/hr/ApplyForOthers/Approvals/viewCancelPending.jsp"/>
+		<forward name="emptimeentry"  path="/jsp/hr/AttendanceSystem/emptimeentry.jsp"/>
+		<forward name="manual_entry"  path="/jsp/hr/AttendanceSystem/manual_entry.jsp"/>
+		<forward name="displaydialyreport"  path="/jsp/hr/AttendanceSystem/dailyreport.jsp"/>
+		
+		
+		<forward name="displayshiftreport"  path="/jsp/hr/AttendanceSystem/shiftreport.jsp"/>
+		
+		<forward name="displayhodshiftreport"  path="/jsp/hr/AttendanceSystem/hodshiftreport.jsp"/>
+		
+		
+		<forward name="displaymonthlyreport"  path="/jsp/hr/AttendanceSystem/monthlyreport.jsp"/>
+		<forward name="displaymusterreport"  path="/jsp/hr/AttendanceSystem/musterreport.jsp"/>
+		<forward name="shiftassign"  path="/jsp/hr/AttendanceSystem/shiftassign.jsp"/>
+<forward name="shiftManualAssign"  path="/jsp/hr/AttendanceSystem/shiftManualAssign.jsp"/>
+<forward name="displayCalenderlist" path="/jsp/hr/AttendanceSystem/CmpCalendarList.jsp"></forward>
+<forward name="exportdisplaydialyreport"  path="/jsp/hr/AttendanceSystem/Exportdailyreport.jsp"/>  
+<forward name="processemptimeentry"  path="/jsp/hr/AttendanceSystem/processemptimeentry.jsp"/>
+<forward name="attendanceReport"  path="/jsp/hr/AttendanceSystem/attendanceReport.jsp"/>
+<forward name="exportdisplaymonthlyreport"  path="/jsp/hr/AttendanceSystem/Exportmonthlyreport.jsp"/>
+<forward name="exportdisplaymusterreport"  path="/jsp/hr/AttendanceSystem/Exportmusterreport.jsp"/>
+<forward name="displaypermissioncancelRequest"  path="/jsp/hr/ApplyForOthers/Approvals/viewPermissioncancel.jsp"/>
+	<forward name="displaydialyreportview"  path="/jsp/hr/AttendanceSystem/displaydailyreport.jsp"/>
+	
+	
+	<forward name="displayshiftreportview"  path="/jsp/hr/AttendanceSystem/displayshiftreport.jsp"/>
+	<forward name="displayhodshiftreportview"  path="/jsp/hr/AttendanceSystem/displayhodshiftreport.jsp"/>
+	
+	<forward name="montlysummaryreport"  path="/jsp/hr/AttendanceSystem/displaymonthlysummaryreport.jsp"/>
+	<forward name="displaymonthdailyattendance"  path="/jsp/hr/AttendanceSystem/displaymonthdailyattendancesummary.jsp"/>
+	
+<forward name="displaymonthlyreportview"  path="/jsp/hr/AttendanceSystem/displaymonthlyreport.jsp"/> 
+<forward name="displaymusterreportview"  path="/jsp/hr/AttendanceSystem/displaymusterreport.jsp"/>
+<forward name="shift"  path="/jsp/hr/AttendanceSystem/shift.jsp"/> 
+<forward name="manpowerreport"  path="/jsp/hr/AttendanceSystem/manpowerreport.jsp"/> 
+
+<forward name="empshift" path="/jsp/hr/AttendanceSystem/shifthod.jsp"/>
+<forward name="shiftview"  path="/jsp/hr/AttendanceSystem/shiftview.jsp"/>
+<forward name="updateemployeeshift" path="/jsp/hr/AttendanceSystem/updateemployeeshift.jsp"></forward>
+<forward name="viewemployeeshift" path="/jsp/hr/AttendanceSystem/viewemployeeshift.jsp"></forward>
+
+
+
+ <forward name="displaymanpowerreport"  path="/jsp/hr/AttendanceSystem/displaymanpowerreport.jsp"/>           
+  <forward name="exportmanpowerreport"  path="/jsp/hr/AttendanceSystem/exportmanpowerreport.jsp"/> 
+   
+  <forward name="Daywisemanpowerreport"  path="/jsp/hr/AttendanceSystem/Daywisemanpowerreport.jsp"/> 
+ <forward name="exportDaywisemanpowerreport"  path="/jsp/hr/AttendanceSystem/exportDaywisemanpowerreport.jsp"/> 
+<forward name="displayDaywisemanpowerreport"  path="/jsp/hr/AttendanceSystem/displayDaywisemanpowerreport.jsp"/> 
+
+ <forward name="casualabsenteeismreport"  path="/jsp/hr/AttendanceSystem/casualabsenteeismreport.jsp"/> 
+ <forward name="exportcasualabsenteeismreport"  path="/jsp/hr/AttendanceSystem/exportcasualabsenteeismreport.jsp"/> 
+ <forward name="displaycasualabsenteeismreport"  path="/jsp/hr/AttendanceSystem/displaycasualabsenteeismreport.jsp"/> 
+
+ <forward name="contractreport"  path="/jsp/hr/AttendanceSystem/Contractualreport.jsp"/> 
+ 
+
+
+ <forward name="displaycontractreport"  path="/jsp/hr/AttendanceSystem/displayContractreport.jsp"/> 
+ <forward name="exportcontractreport"  path="/jsp/hr/AttendanceSystem/exportContractreport.jsp"/>
+  <forward name="dailyPerformancereport"  path="/jsp/hr/AttendanceSystem/dailyPERFORMANCEreport.jsp"/> 
+ <forward name="displaydailyPerformancereport"  path="/jsp/hr/AttendanceSystem/displaydailyPERFORMANCEreport.jsp"/> 
+ <forward name="exportdailyPerformancereport"  path="/jsp/hr/AttendanceSystem/exportdailyPERFORMANCEreport.jsp"/> 
+    <forward name="dailyArrivalreport"  path="/jsp/hr/AttendanceSystem/dailyARRIVALreport.jsp"/> 
+ <forward name="displaydailyArrivalreport"  path="/jsp/hr/AttendanceSystem/displaydailyARRIVALreport.jsp"/> 
+ <forward name="exportdailyArrivalreport"  path="/jsp/hr/AttendanceSystem/exportdailyARRIVALreport.jsp"/> 
+      <forward name="deptSummaryreport"  path="/jsp/hr/AttendanceSystem/DeptSummaryreport.jsp"/> 
+ <forward name="displaydeptSummaryreport"  path="/jsp/hr/AttendanceSystem/displayDeptSummaryreport.jsp"/> 
+ <forward name="exportDeptSummaryreport"  path="/jsp/hr/AttendanceSystem/exportDeptSummaryreport.jsp"/>
+   <forward name="attritionreport"  path="/jsp/hr/AttendanceSystem/Attritionreport.jsp"/> 
+ <forward name="displayattritionreport"  path="/jsp/hr/AttendanceSystem/displayAttritionreport.jsp"/> 
+ <forward name="exportAttritionreport"  path="/jsp/hr/AttendanceSystem/exportAttritionreport.jsp"/>
+  <forward name="cumulativemanpowerreport"  path="/jsp/hr/AttendanceSystem/cumulativemanpowerreport.jsp"/>
+  <forward name="displaycumulativemanpowerreport"  path="/jsp/hr/AttendanceSystem/displayCumulativemanpowerreport.jsp"/>
+    <forward name="exportcumulativemanpowerreport"  path="/jsp/hr/AttendanceSystem/exportcumulativemanpowerreport.jsp"/>
+     <forward name="Holidays"  path="/jsp/hr/AttendanceSystem/holidaydetails.jsp"/>
+     <forward name="displayHolidays"  path="/jsp/hr/AttendanceSystem/displayholidaydetails.jsp"/>
+    <forward name="exportHolidays"  path="/jsp/hr/AttendanceSystem/exportholidaydetails.jsp"/>
+       <forward name="leavbalancereport"  path="/jsp/hr/AttendanceSystem/leavebalancereport.jsp"/>
+    <forward name="displayleavbalreport"  path="/jsp/hr/AttendanceSystem/displayLeaveBalancereport.jsp"/>
+    <forward name="exportLeavebalreport"  path="/jsp/hr/AttendanceSystem/exportLeavebalreport.jsp"/>
+         	<forward name="empdetailreport"  path="/jsp/hr/AttendanceSystem/empdetail.jsp"/>
+        	<forward name="displayempdetailreport"  path="/jsp/hr/AttendanceSystem/displayEmpDetailreport.jsp"/>
+            <forward name="exportempdetailreport"  path="/jsp/hr/AttendanceSystem/exportEmpDetailreport.jsp"/>
+	   		<forward name="exportshifttemp"  path="/jsp/hr/AttendanceSystem/exportShiftTemplate.jsp"/>
+		    <forward name="organogrammanpowerreport"  path="/jsp/hr/AttendanceSystem/ornogrammanpowerreport.jsp"/>
+        	<forward name="displayOrganogrammanpowerreport"  path="/jsp/hr/AttendanceSystem/displayOrganogrammanpowerreport.jsp"/>  
+      		<forward name="exportOrganogrammanpowerreport"  path="/jsp/hr/AttendanceSystem/exportOrganogrammanpowerreport.jsp"/>  
+		    <forward name="missingpunchreport"  path="/jsp/hr/AttendanceSystem/missingpunch.jsp"/>
+		    
+		    <forward name="displayempManualAuditreport"  path="/jsp/hr/AttendanceSystem/displayempManualAuditreport.jsp"/>
+            <forward name="empManualAuditreportSearch"  path="/jsp/hr/AttendanceSystem/empManualAuditreport.jsp"/>
+            <forward name="empManualAuditreport"  path="/jsp/hr/AttendanceSystem/empManualAuditreport.jsp"/>
+            <forward name="exportempManualAuditreportSearch"  path="/jsp/hr/AttendanceSystem/exportempManualAuditreportSearch.jsp"/>
+		   
+		    <!-- <forward name="statutoryReport"  path="/jsp/hr/AttendanceSystem/Statutory_report/StatutoryReport.jsp"/>  -->  
+            <forward name="displayleavewagesreport"  path="/jsp/hr/AttendanceSystem/leavewagesreport.jsp"/>                      
+            <forward name="exportDailyWagesReport"  path="/jsp/hr/AttendanceSystem/Exportdailywagesreport.jsp"/> 
+            <forward name="nationalFestivalreport"  path="/jsp/hr/AttendanceSystem/holidayFestivalreport.jsp"/>  
+            <forward name="exportNationalfestivalReport"  path="/jsp/hr/AttendanceSystem/Exportnationalfestivalreport.jsp"/> 
+            <forward name="musterRollreport"  path="/jsp/hr/AttendanceSystem/MusterRollreport.jsp"/>  
+            <forward name="exportmusterRollReport"  path="/jsp/hr/AttendanceSystem/ExportMusterRollreport.jsp"/> 
+            <forward name="adultworkersreport"  path="/jsp/hr/AttendanceSystem/adultWorkerreport.jsp"/>  
+            <forward name="exportadultworkersreport"  path="/jsp/hr/AttendanceSystem/ExportAdultWorkerlreport.jsp"/> 
+          
+		   
+		    <forward name="WeekOffAssign"  path="/jsp/hr/AttendanceSystem/EMPCmpCalender.jsp"/>
+           	<forward name="displayEMPCalenderlist"  path="/jsp/hr/AttendanceSystem/EMPCmpCalendarList.jsp"/> 
+            <forward name="progressbar"  path="/jsp/hr/AttendanceSystem/Progressbar.jsp"/>   
+            <forward name="displaycompoffcancelRequest"  path="/jsp/hr/ApplyForOthers/Approvals/viewCompoffcancelreqst.jsp"/>    
+            <forward name="displayOTcancelRequest"  path="/jsp/hr/ApplyForOthers/Approvals/viewOTcancelreqst.jsp"/>   
+           <!--  <forward name="statutoryReport"  path="/jsp/hr/AttendanceSystem/Statutory_report/StatutoryReport.jsp"/>   
+            <forward name="displayleavewagesreport"  path="/jsp/hr/AttendanceSystem/Statutory_report/leavewagesreport.jsp"/>                      
+            <forward name="exportDailyWagesReport"  path="/jsp/hr/AttendanceSystem/Statutory_report/Exportdailywagesreport.jsp"/> 
+            <forward name="nationalFestivalreport"  path="/jsp/hr/AttendanceSystem/Statutory_report/holidayFestivalreport.jsp"/>  
+            <forward name="exportNationalfestivalReport"  path="/jsp/hr/AttendanceSystem/Statutory_report/Exportnationalfestivalreport.jsp"/> 
+            <forward name="musterRollreport"  path="/jsp/hr/AttendanceSystem/Statutory_report/MusterRollreport.jsp"/>  
+            <forward name="exportmusterRollReport"  path="/jsp/hr/AttendanceSystem/Statutory_report/ExportMusterRollreport.jsp"/> 
+            <forward name="adultworkersreport"  path="/jsp/hr/AttendanceSystem/Statutory_report/adultWorkerreport.jsp"/>  
+            <forward name="exportadultworkersreport"  path="/jsp/hr/AttendanceSystem/Statutory_report/ExportAdultWorkerlreport.jsp"/> 
+           -->    
+              <forward name="equalRenumerationreport"  path="/jsp/hr/AttendanceSystem/Statutory_report/equalRenumerationreport.jsp"/>  
+              <forward name="exportEqualRenumerationReport"  path="/jsp/hr/AttendanceSystem/Statutory_report/ExportEqualRenumerationreport.jsp"/> 
+              
+                <forward name="bonuspaidreport"  path="/jsp/hr/AttendanceSystem/Statutory_report/BonusPaidreport.jsp"/>  
+              <forward name="exportBonusPaidReport"  path="/jsp/hr/AttendanceSystem/Statutory_report/ExportbonusPaidreport.jsp"/> 
+		  <forward name="displayAll" path="/jsp/hr/AttendanceSystem/PortalStatus/displaylinks.jsp"></forward>
+	   <forward name="exportdata" path="/jsp/hr/AttendanceSystem/PortalStatus/exportdata.jsp"></forward>
+		
+		
+		               <forward name="displaypayablemusterreport" path="/jsp/hr/AttendanceSystem/payablemusterreport.jsp"></forward>
+	   <forward name="exportdisplaypayablemusterreport" path="/jsp/hr/AttendanceSystem/Exportpayablemusterreport.jsp"></forward>
+		</action>
+	<action attribute="hrLeaveForm" 
+		input="/jsp/main/feedBack/feedBack.jsp"
+		name="hrLeaveForm" parameter="method"
+		 path="/hrLeave"
+		scope="request"
+	 type="com.microlabs.hr.action.HRLeaveAction">
+		<forward name="search"  path="/jsp/hr/ApplyForOthers/Search.jsp"/>
+		<forward name="newLeaveForm"  path="/jsp/hr/ApplyForOthers/applyNewLeave.jsp"/>
+		<forward name="calculateDays"  path="/jsp/hr/ApplyForOthers/leaveCalculateDaysAjax.jsp"/>
+		<forward name="applyOnduty" path="/jsp/hr/ApplyForOthers/applyOnDuty.jsp"/>
+		<forward name="permission" path="/jsp/hr/ApplyForOthers/permission.jsp"/>
+			<forward name="approvePage" path="/jsp/hr/ApplyForOthers/PendingRequest.jsp"/>
+			<forward name="displayattendance" path="/jsp/hr/ApplyForOthers/viewAttendance.jsp"/>
+				<forward name="newcomp" path="/jsp/hr/ApplyForOthers/applycomff.jsp"/>
+				<forward name="newOT" path="/jsp/hr/ApplyForOthers/applyOT.jsp"/>	
+		<forward name="leaveBal" path="/jsp/hr/ApplyForOthers/leaveBalence.jsp"/>
+			<forward name="compofflist" path="/jsp/hr/ApplyForOthers/compofflist.jsp"/>
+		</action>
+	<action
+      attribute="sapAttendenceForm"
+      input="/jsp/hr/SAPAttendence/Attendence.jsp"
+      name="sapAttendenceForm"
+      parameter="method"
+      path="/sapAttendence"
+      scope="request"
+      type="com.microlabs.hr.action.SAPAttendenceAction">
+       <forward name="display" path="/jsp/hr/SAPAttendence/Attendence.jsp"/>
+    </action>
+    <action attribute="hrReportForm" 
+		input="/jsp/main/feedBack/feedBack.jsp"
+		name="hrReportForm" parameter="method"
+		 path="/hrreport"
+		scope="request"
+	 type="com.microlabs.hr.action.HRReportAction">
+		<forward name="display"  path="/jsp/hr/Reports/displayList.jsp"/>
+		<forward name="HrLeaves"  path="/jsp/hr/Reports/reportView.jsp"/>
+				<forward name="ExportCompff"  path="/jsp/hr/Reports/exportCompOffreport.jsp"/>
+		<forward name="ExportOT"  path="/jsp/hr/Reports/exportOTreport.jsp"/>
+		</action>
+	</action-mappings>
+	<message-resources parameter="com.yourcompany.struts.ApplicationResources"/>
+</struts-config>

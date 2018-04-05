@@ -1,0 +1,32 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{margin:0px 0px 0px 35px; font-family:Arial; font-size:12px; color:#000;}
+.wrapper{background-color:#eeeeee; border:1px #d4d4d4 solid; width:804px; border-top:none;}
+
+.spiral{background:url(../images/cal_images/spiral_img.jpg); width:804px; height:31px; background-repeat:no-repeat;}
+
+.month{ width:220px; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:24px; color:#4e82a7; text-align:center; text-transform:capitalize}
+
+td{width:90px; height:90px; background-color:; border:1px #d4d4d4 solid; text-align:right; vertical-align:top; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; color:#1f4a69}
+
+.reminder_icon{width:22px; height:22px; margin-top:50px; float:left;}
+
+td#days{width:90px; height:30px; border:1px #d4d4d4 solid; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:14px; color:#245476; text-transform:uppercase; text-align:center; line-height:30px;}
+
+td#sunday{width:90px; height:30px; border:1px #d4d4d4 solid; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:14px; color:#df3030; text-transform:uppercase; text-align:center; line-height:30px; font-style:normal}
+
+.curl{background:url(../images/cal_images/curl.jpg); width:257px; height:39px; background-repeat:no-repeat; background-position:right bottom;}
+#holiday{width:13px; height:13px; background-color:#a2bace; float:left; margin:10px; border:1px #CCC solid}
+
+.text{font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#444343; text-align:left; text-transform:capitalize; float:left; margin:10px 0px 10px 0px}
+#casual{width:13px; height:13px; background-color:#b6ebb2; float:left; margin:10px; border:1px #CCC solid}
+
+
+.compant_holiday{width:90px; height:90px; background-color:#eeeeee; border:1px #d4d4d4 solid; text-align:right; vertical-align:top; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; color:#1f4a69; cursor:pointer}
+.compant_holiday:hover{width:90px; height:90px; background-color:#d6dde3; border:1px #d4d4d4 solid; text-align:right; vertical-align:top; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; color:#1f4a69; cursor:pointer}
+
+.casual_leave{width:90px; height:90px; background-color:#eeeeee; border:1px #d4d4d4 solid; text-align:right; vertical-align:top; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; color:#1f4a69; cursor:pointer}
+.casual_leave:hover{width:90px; height:90px; background-color:#def2dc; border:1px #d4d4d4 solid; text-align:right; vertical-align:top; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; color:#1f4a69; cursor:pointer;}
+
+

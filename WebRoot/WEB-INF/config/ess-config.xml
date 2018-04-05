@@ -1,0 +1,859 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+  <data-sources/>
+  <form-beans>
+    <form-bean name="leaveForm" type="com.microlabs.ess.form.LeaveForm" />
+   	<form-bean name="approvalLevelsForm" type="com.microlabs.ess.form.ApprovalLevelsForm" />
+   	
+   	<form-bean name="joiningFormalityForm" type="com.microlabs.ess.form.JoiningFormalityForm" />
+   	   		<form-bean name="joiningReportForm" type="com.microlabs.ess.form.JoiningReportForm" />
+    <form-bean name="emppersonalForm" type="com.microlabs.ess.form.EmppersonalForm" />
+   	<form-bean name="employeeOfficialInfoForm" type="com.microlabs.ess.form.EmployeeOfficialInfoForm" />   	
+   	<form-bean name="vendorMasterRequestForm" type="com.microlabs.ess.form.VendorMasterRequestForm" />   	
+   	<form-bean name="customerMasterForm" type="com.microlabs.ess.form.CustomerMasterForm" />
+   	<form-bean name="rawMaterialForm" type="com.microlabs.ess.form.RawMaterialForm" />
+   	<form-bean name="packagingMaterialForm" type="com.microlabs.ess.form.PackageMaterialMasterForm"></form-bean>
+   	<form-bean name="materialCodeForm" type="com.microlabs.ess.form.MaterialCodeRequestForm"></form-bean>
+   	<form-bean name="finishedProductForm" type="com.microlabs.ess.form.FinishedProductForm"></form-bean>
+   	<form-bean name="semiFinshedForm" type="com.microlabs.ess.form.SemiFinishedForm"></form-bean>
+   	<form-bean name="promotionalForm" type="com.microlabs.ess.form.PromotionalForm"></form-bean>
+   	<form-bean name="generalMaterialForm" type="com.microlabs.ess.form.GeneralMaterialForm"></form-bean>
+   	<form-bean name="materialCodeExtenstionForm" type="com.microlabs.ess.form.MaterialCodeExtensionForm"></form-bean> 	
+   	<form-bean name="serviceMasterRequestForm" type="com.microlabs.ess.form.ServiceMasterRequestForm" />
+   	<form-bean name="reportRequestForm" type="com.microlabs.ess.form.ReportRequestForm" />  	
+   	<form-bean name="onDutyForm" type="com.microlabs.ess.form.OnDutyForm" />
+   	<form-bean name="permissionForm" type="com.microlabs.ess.form.PermissionForm" />
+   	<form-bean name="attendenceForm" type="com.attendence.form.AttendenceForm" />
+	<form-bean name="payslipForm" type="com.microlabs.ess.payslip.form.PayslipForm" />
+   	<form-bean name="empOfficInfoForm" type="com.microlabs.hr.form.EmpOfficalInformationForm"/>
+   	<form-bean name="delegateForm" type="com.microlabs.ess.form.DelegationForm"/>
+   	<form-bean name="crbForm" type="com.microlabs.ess.form.ConfRoomBookingForm" />
+   	<form-bean name="zpsrForm" type="com.microlabs.ess.form.ZPSRForm"></form-bean>
+   	<form-bean name="materialsForm" type="com.microlabs.it.form.MaterialsForm" />
+   	<form-bean name="securityForm" type="com.microlabs.ess.form.SecurityForm" />
+   	<form-bean name="birthdayEmpForm" type="com.microlabs.ess.form.BirthdayEmpForm" />
+   	<form-bean name="claimTRLPForm" type="com.microlabs.ess.form.ClaimTRLPForm" />
+   	<form-bean name="previousIncomeForm" type="com.microlabs.ess.form.PreviousIncomeForm" />
+	<form-bean name="incomeTaxForm" type="com.microlabs.ess.form.IncomeTaxForm" />
+	<form-bean name="extIncomeForm" type="com.microlabs.ess.form.ExternalIncomeForm" />
+	<form-bean name="ltaForm" type="com.microlabs.ess.form.LTAForm" />
+	<form-bean name="summaryForm" type="com.microlabs.ess.form.SummaryForm" />
+	<form-bean name="myIncomeTaxForm" type="com.microlabs.ess.form.MyIncomeTaxForm" />
+	<form-bean name="travelRequestForm" type="com.microlabs.ess.form.TravelRequestForm" />
+	<form-bean name="sapReportForm" type="com.microlabs.ess.form.SAPReportForm" />
+	<form-bean name="conferenceForm" type="com.microlabs.ess.form.ConferenceForm" />
+	<form-bean name="vcForm" type="com.microlabs.ess.form.VCForm" />
+	<form-bean name="materialHistoryForm" type="com.microlabs.ess.form.MaterialHistoryForm" />
+		<form-bean name="paysliprequestForm" type="com.microlabs.ess.form.PayslipRequestForm" />
+			<form-bean name="barcodeForm" type="com.microlabs.ess.form.BarcodeForm" />
+  </form-beans>
+ <global-exceptions/>
+	
+  <global-forwards >
+  <forward name="displayiFrameSession" path="/jsp/ess/sessionExpiredLink.jsp"></forward>
+  </global-forwards>
+  <action-mappings>
+   <action
+      attribute="materialHistoryForm"
+      input="/jsp/admin/userGroup.jsp"
+      name="materialHistoryForm"
+      parameter="method"
+      path="/materialHistory"
+      scope="request"
+      type="com.microlabs.ess.action.MaterialHistoryAction">
+      <forward name="ROH" path="/jsp/ess/sapMasterRequest/MaterialCodeRequest/history/ROH_H.jsp"/> 
+       <forward name="VERP" path="/jsp/ess/sapMasterRequest/MaterialCodeRequest/history/VERP_H.jsp"/> 
+       <forward name="HALB" path="/jsp/ess/sapMasterRequest/MaterialCodeRequest/history/HALB_H.jsp"/> 
+       <forward name="FERT" path="/jsp/ess/sapMasterRequest/MaterialCodeRequest/history/FERT_H.jsp"/> 
+       <forward name="generalMaterial" path="/jsp/ess/sapMasterRequest/MaterialCodeRequest/history/GeneralMaterial_H.jsp"/>
+       <forward name="zpsr" path="/jsp/ess/sapMasterRequest/MaterialCodeRequest/history/ZPSR_H.jsp"/>
+       <forward name="zppc" path="/jsp/ess/sapMasterRequest/MaterialCodeRequest/history/ZPPC_H.jsp"/>
+       <forward name="serviceMaster" path="/jsp/ess/sapMasterRequest/MaterialCodeRequest/history/serviceMaster_H.jsp"/>
+       <forward name="customerMaster" path="/jsp/ess/sapMasterRequest/MaterialCodeRequest/history/customerMaster_H.jsp"/>
+        <forward name="vendorMaster" path="/jsp/ess/sapMasterRequest/MaterialCodeRequest/history/vendorMaster_H.jsp"/>
+       
+       
+    </action>
+        <action
+      attribute="barcodeForm"
+      input="/jsp/ess/viewAttendence/attendence.jsp"
+      name="barcodeForm"
+      parameter="method"
+      path="/barcode"
+      scope="request"
+      type="com.microlabs.ess.action.BarcodeAction">
+      
+      <forward name="barcode" path="/jsp/ess/Barcode/barcode.jsp" />
+      <forward name="barcodeList" path="/jsp/ess/Barcode/barcodeList.jsp" />
+      <forward name="exportbarcodeList" path="/jsp/ess/Barcode/exportbarcodeList.jsp" />
+      
+      
+      </action>
+    
+      <action 
+  attribute="paysliprequestForm"
+  path="/paysliprequest" 
+  parameter="method"
+  name="paysliprequestForm"
+  scope="request"
+  type="com.microlabs.ess.action.PayslipRequestAction" >
+   <forward name="displaylist" path="/jsp/ess/PayslipRequest/myPayslipRequest.jsp"/>
+   <forward name="displayquerieslist" path="/jsp/ess/PayslipRequest/hrqueryList.jsp"/>
+    <forward name="newquery" path="/jsp/ess/PayslipRequest/newHRQuery.jsp"/>
+      <forward name="HRqueryUserView" path="/jsp/ess/PayslipRequest/HRQueryUserView.jsp"/> 
+    
+    <forward name="pendingHRquery" path="/jsp/hr/HRQuery/hrqueryPendingList.jsp"/>
+        <forward name="HrqueryView" path="/jsp/hr/HRQuery/HRQueryView.jsp"/>
+           <forward name="ExportHRquery" path="/jsp/hr/HRQuery/ExportHRQueryList.jsp"/>
+               <forward name="hrlistajax" path="/jsp/ess/PayslipRequest/HRListAjax.jsp"/>
+  </action>
+       <action
+      attribute="joiningReportForm"
+      input="/jsp/ess/joiningformality/joiningformality.jsp"
+      name="joiningReportForm"
+      parameter="method"
+      path="/essJoin"
+      scope="session"
+      type="com.microlabs.ess.action.JoiningReportAction">
+<forward name="displayjoinlist" path="/jsp/ess/JoiningReport/joiningreportlist.jsp" />
+       <forward name="display1" path="/jsp/ess/JoiningReport/joiningreport.jsp" />
+      
+    </action>
+    
+    
+    
+    
+      <action
+      attribute="travelRequestForm"
+      input="/jsp/admin/userGroup.jsp"
+      name="travelRequestForm"
+      parameter="method"
+      path="/travelrequest"
+      scope="session"
+      type="com.microlabs.ess.action.TravelRequestAction">
+        <forward name="domesticformrequest" path="/jsp/ess/TravelRequest/domestic_req.jsp"/>
+        <forward name="domestic" path="/jsp/ess/TravelRequest/domestic.jsp"></forward>
+          <forward name="apprList" path="/jsp/ess/TravelRequest/TraveldeskAppr.jsp"></forward>
+            <forward name="travelAjax" path="/jsp/ess/TravelRequest/travelAjax.jsp"></forward>
+             <forward name="travelAjax2" path="/jsp/ess/TravelRequest/travelAjax2.jsp"></forward>
+        
+         <forward name="revertdomestic" path="/jsp/ess/TravelRequest/revertdomestic.jsp"></forward>
+          <forward name="editdomestic" path="/jsp/ess/TravelRequest/editdomestic.jsp"></forward>
+           <forward name="editmypage" path="/jsp/ess/TravelRequest/editmypage.jsp"></forward>
+        <forward name="domestic_rep" path="/jsp/ess/TravelRequest/domestic_rep.jsp"></forward>
+        <forward name="travellerList" path="/jsp/ess/TravelRequest/travellerList.jsp"></forward>
+        <forward name="billerList" path="/jsp/ess/TravelRequest/billerList.jsp"></forward>
+
+
+        <forward name="internationalformrequest" path="/jsp/ess/TravelRequest/international.jsp"/>
+        <forward name="mytravellist" path="/jsp/ess/TravelRequest/MytravelList.jsp"/>
+        <forward name="MyFinanceList" path="/jsp/ess/TravelRequest/MyFinanceList.jsp"/>
+        <forward name="MyFinanceReceieveList" path="/jsp/ess/TravelRequest/MyFinanceReceieveList.jsp"/>
+        <forward name="viewbillerList" path="/jsp/ess/TravelRequest/viewbillerList.jsp"></forward>
+
+        <forward name="viewrecievebillerList" path="/jsp/ess/TravelRequest/viewrecievebillerList.jsp"></forward>
+        <forward name="viewverifybillupload" path="/jsp/ess/TravelRequest/viewverifybillupload.jsp"></forward>
+
+        <forward name="viewmyrequest" path="/jsp/ess/TravelRequest/viewRequest.jsp"/>
+        <forward name="mytravelBookinglist" path="/jsp/ess/TravelRequest/MyBookingList.jsp"/>
+        <forward name="viewbookingrequest" path="/jsp/ess/TravelRequest/viewbookingRequest.jsp"/>
+        <forward name="mytravelConfirmationlist" path="/jsp/ess/TravelRequest/MyConfirmationList.jsp"/>
+        <forward name="displayReportDetails" path="/jsp/ess/TravelRequest/displayReportDetails.jsp"/>
+
+        <forward name="viewconfirmrequest" path="/jsp/ess/TravelRequest/viewConfirmRequest.jsp"/>
+        <forward name="searchemployee" path="/jsp/ess/TravelRequest/searchApprovers.jsp"/>
+        <forward name="travellerlistAjax" path="/jsp/ess/TravelRequest/travellerlistAjax.jsp"/>
+        <forward name="traveldate" path="/jsp/ess/TravelRequest/travelcheckingAjax.jsp"/>
+        <forward name="travelmode" path="/jsp/ess/TravelRequest/travelmodeAjax.jsp"/>
+        <forward name="approvePage" path="/jsp/ess/TravelRequest/approvl.jsp"/>
+
+        <forward name="viewDetails" path="/jsp/ess/TravelRequest/viewDetails.jsp"/>
+        <forward name="travelDesk" path="/jsp/ess/TravelRequest/travelDeskAjax.jsp"/>
+        <forward name="serviceclass" path="/jsp/ess/TravelRequest/serviceclassAjax.jsp"/> 
+        
+        
+    </action>
+    
+    
+  <action
+      attribute="vcForm"
+      input="/jsp/admin/userGroup.jsp"
+      name="vcForm"
+      parameter="method"
+      path="/vc"
+      scope="request"
+      type="com.microlabs.ess.action.VCAction">
+       <forward name="confBookedList" path="/jsp/ess/VCRoom/VCRoomList.jsp"/>
+       <forward name="roomsList" path="/jsp/ess/VCRoom/RoomsList.jsp"/>
+       <forward name="bookRoom" path="/jsp/ess/VCRoom/BookVCRoom.jsp"/>
+        <forward name="availabletyStatus" path="/jsp/ess/VCRoom/AvailStatusAjax.jsp"/>
+            <forward name="VCReport" path="/jsp/ess/VCRoom/VCReport.jsp"/>
+            
+            <forward name="raiserequestlist" path="/jsp/ess/DataUpload/raiserequestList.jsp"/>
+         <forward name="myraiserequest" path="/jsp/ess/DataUpload/myraiserequest.jsp"/>
+         <forward name="viewmyraiserequest" path="/jsp/ess/DataUpload/viewmyraiserequest.jsp"/>
+         <forward name="displayraiserequest" path="/jsp/ess/DataUpload/displayraiserequest.jsp"/>
+         <forward name="viewPendingrequest" path="/jsp/ess/DataUpload/viewPendingrequest.jsp"/>
+         <forward name="viewSubmittedrequest" path="/jsp/ess/DataUpload/viewSubmittedrequest.jsp"/>
+         <forward name="viewCompletedrequest" path="/jsp/ess/DataUpload/viewCompletedrequest.jsp"/> 
+    </action>
+   <action
+      attribute="conferenceForm"
+      input="/jsp/admin/userGroup.jsp"
+      name="conferenceForm"
+      parameter="method"
+      path="/conference"
+      scope="request"
+      type="com.microlabs.ess.action.ConferenceAction">
+       <forward name="confBookedList" path="/jsp/ess/Conference/ConferenceRoomList.jsp"/>
+       <forward name="roomsList" path="/jsp/ess/Conference/RoomsList.jsp"/>
+       <forward name="bookRoom" path="/jsp/ess/Conference/BookConferenceRoom.jsp"/>
+        <forward name="availabletyStatus" path="/jsp/ess/Conference/AvailStatusAjax.jsp"/>
+    </action>
+  <action
+      attribute="conferenceForm"
+      input="/jsp/admin/userGroup.jsp"
+      name="conferenceForm"
+      parameter="method"
+      path="/conference"
+      scope="request"
+      type="com.microlabs.ess.action.ConferenceAction">
+       <forward name="confBookedList" path="/jsp/ess/Conference/ConferenceRoomList.jsp"/>
+       <forward name="roomsList" path="/jsp/ess/Conference/RoomsList.jsp"/>
+       <forward name="bookRoom" path="/jsp/ess/Conference/BookConferenceRoom.jsp"/>
+        <forward name="availabletyStatus" path="/jsp/ess/Conference/AvailStatusAjax.jsp"/>
+    </action>
+    
+   <action
+      attribute="sapReportForm"
+      input="/jsp/admin/userGroup.jsp"
+      name="sapReportForm"
+      parameter="method"
+      path="/sapReport"
+      scope="request"
+      type="com.microlabs.ess.action.SAPReportAction">
+       <forward name="display" path="/jsp/ess/sapMasterRequest/SAPRepot/report.jsp"/>
+      <forward name="exportToExcel" path="/jsp/ess/sapMasterRequest/SAPRepot/exportToExcel.jsp"/>
+       <forward name="ROHDetails" path="/jsp/ess/sapMasterRequest/SAPRepot/ROH.jsp"/>
+       <forward name="pacmaterial" path="/jsp/ess/sapMasterRequest/SAPRepot/VERP.jsp"/>
+        <forward name="semimaterial" path="/jsp/ess/sapMasterRequest/SAPRepot/SemiFinished.jsp"/>
+       <forward name="finmaterial" path="/jsp/ess/sapMasterRequest/SAPRepot/FinishedProducts.jsp"/>
+       <forward name="genmaterial" path="/jsp/ess/sapMasterRequest/SAPRepot/GeneralMaterial.jsp"/>
+       <forward name="planmaterial" path="/jsp/ess/sapMasterRequest/SAPRepot/ZPSR.jsp"/>
+       <forward name="promaterial" path="/jsp/ess/sapMasterRequest/SAPRepot/ZPPC.jsp"/>
+       <forward name="CustomerMasterView" path="/jsp/ess/sapMasterRequest/SAPRepot/CustomerMasterView.jsp"/>
+        <forward name="vendorMasterView" path="/jsp/ess/sapMasterRequest/SAPRepot/vendorMasterRequestView.jsp" />
+  <forward name="SermasterView" path="/jsp/ess/sapMasterRequest/SAPRepot/serviceMasterRequestView.jsp" />
+    </action>
+  
+
+   <action
+      attribute="myIncomeTaxForm"
+      input="/jsp/admin/userGroup.jsp"
+      name="myIncomeTaxForm"
+      parameter="method"
+      path="/myIncomeReq"
+      scope="request"
+      type="com.microlabs.ess.action.MyIncomeTaxAction">
+     <forward name="displayPending" path="/jsp/ess/IncomeTax/MyRequest/MyRequest.jsp"/>
+         <forward name="investment"  path="/jsp/ess/IncomeTax/MyRequest/investment.jsp"/>
+		<forward name="claimTRLP"  path="/jsp/ess/IncomeTax/MyRequest/claimTRLP.jsp"/>
+		<forward name="previousIncome"  path="/jsp/ess/IncomeTax/MyRequest/PreviousIncome.jsp"/>
+		<forward name="externalIncome"  path="/jsp/ess/IncomeTax/MyRequest/ExternalIncome.jsp"/>
+		<forward name="ltaIncome"  path="/jsp/ess/IncomeTax/MyRequest/LTAIncome.jsp"/>
+		<forward name="medicalIncome"  path="/jsp/ess/IncomeTax/MyRequest/medicalbillrequest.jsp"/>
+    </action>
+   <action
+      attribute="summaryForm"
+      input="/jsp/admin/userGroup.jsp"
+      name="summaryForm"
+      parameter="method"
+      path="/summary"
+      scope="request"
+      type="com.microlabs.ess.action.SummaryAction">
+       <forward name="newSummary" path="/jsp/ess/IncomeTax/Summary/Summary.jsp"/>
+       <forward name="prerrequisites" path="/jsp/ess/IncomeTax/Summary/Prerrequisites.jsp"/>
+       <forward name="allowance" path="/jsp/ess/IncomeTax/Summary/Allowance.jsp"/>
+       <forward name="breakup" path="/jsp/ess/IncomeTax/Summary/BreakUp.jsp"/>
+       <forward name="salaryDetails" path="/jsp/ess/IncomeTax/Summary/SalaryDetails.jsp"/>
+    </action>
+  <action
+      attribute="ltaForm"
+      input="/jsp/admin/userGroup.jsp"
+      name="ltaForm"
+      parameter="method"
+      path="/lta"
+      scope="request"
+      type="com.microlabs.ess.action.LTAAction">
+       <forward name="newLTA" path="/jsp/ess/IncomeTax/LTA/LTA.jsp"/>
+       <forward name="calculateDays" path="/jsp/ess/IncomeTax/LTA/leaveCalculateDaysAjax.jsp"/>
+       <forward name="showUploadFields" path="/jsp/ess/IncomeTax/LTA/uploadLTAFils.jsp"/>
+        <forward name="newMedical" path="/jsp/ess/IncomeTax/medical/medicalbill.jsp"/>
+        <forward name="showMedicalUploadFields" path="/jsp/ess/IncomeTax/medical/uploadMedicalFils.jsp"/>
+    </action>
+  <action
+      attribute="extIncomeForm"
+      input="/jsp/admin/userGroup.jsp"
+      name="extIncomeForm"
+      parameter="method"
+      path="/extIncome"
+      scope="request"
+      type="com.microlabs.ess.action.ExternalIncomeAction">
+       <forward name="newExtIncome" path="/jsp/ess/IncomeTax/ExternalIncome/ExtIncome.jsp"/>
+          <forward name="showUploadFields" path="/jsp/ess/IncomeTax/ExternalIncome/uploadExterFils.jsp"/>
+    </action>
+    <action
+      attribute="incomeTaxForm"
+      input="/jsp/admin/userGroup.jsp"
+      name="incomeTaxForm"
+      parameter="method"
+      path="/incomeTax"
+      scope="request"
+      type="com.microlabs.ess.action.IncomeTaxAction">
+       <forward name="investmentList" path="/jsp/ess/IncomeTax/Investment/InvestmentList.jsp"/>
+     <forward name="display" path="/jsp/ess/IncomeTax/Investment/ApplyInvestment.jsp"/>
+     <forward name="showUploadFields" path="/jsp/ess/IncomeTax/Investment/uploadFils.jsp"/>
+     <forward name="modifyInvestment" path="/jsp/ess/IncomeTax/Investment/updateInvestment.jsp"/>
+    </action>
+    <action
+      attribute="previousIncomeForm"
+      input="/jsp/ess/Security.jsp"
+      name="previousIncomeForm"
+      parameter="method"
+      path="/previousIncome"
+      scope="request"
+      type="com.microlabs.ess.action.PreviousIncomeAction" >
+       <forward name="displayDraftList" path="/jsp/ess/IncomeTax/PreviousIncome/PreviousIncomeDrafts.jsp"/>
+        <forward name="newPreviousIncome" path="/jsp/ess/IncomeTax/PreviousIncome/ApplyPreviousIncome.jsp"/>
+        <forward name="showUploadFields" path="/jsp/ess/IncomeTax/PreviousIncome/uploadPreviousFils.jsp"/>
+    </action>
+     <action
+      attribute="claimTRLPForm"
+      input="/jsp/ess/Security.jsp"
+      name="claimTRLPForm"
+      parameter="method"
+      path="/claimTRLP"
+      scope="request"
+      type="com.microlabs.ess.action.ClaimTRLPAction" >
+       <forward name="displayDraftList" path="/jsp/ess/IncomeTax/ClaimTRLP/ClaimTRLPDrafts.jsp"/>
+        <forward name="newClaimTRLP" path="/jsp/ess/IncomeTax/ClaimTRLP/ApplyClaimTRLP.jsp"/>
+       <forward name="showUploadFields" path="/jsp/ess/IncomeTax/ClaimTRLP/uploadClaimFils.jsp"/> 
+    </action>
+   <action
+      attribute="birthdayEmpForm"
+      input="/jsp/ess/Security.jsp"
+      name="birthdayEmpForm"
+      parameter="method"
+      path="/birthdayEmp"
+      scope="request"
+      type="com.microlabs.ess.action.BirthdayEmpAction">
+       <forward name="display" path="/jsp/ess/BirthdayEmployee/BirthdayEmployeeList.jsp"/>
+    </action>
+  <action
+      attribute="securityForm"
+      input="/jsp/ess/Security.jsp"
+      name="securityForm"
+      parameter="method"
+      path="/security"
+      scope="request"
+      type="com.microlabs.ess.action.SecurityAction">
+       <forward name="displayPending" path="/jsp/ess/Security/PendingList.jsp"/>
+       <forward name="editDetails" path="/jsp/ess/Security/RequestDetails.jsp"/>
+       
+       
+    </action>
+   <action
+      attribute="materialsForm"
+      input="/jsp/admin/userGroup.jsp"
+      name="materialsForm"
+      parameter="method"
+      path="/materials"
+      scope="request"
+      type="com.microlabs.it.action.MaterialsAction">
+      <forward name="sapUserCredentials" path="/jsp/it/materialMaster/sapUserCredentials.jsp"/>
+     <forward name="display" path="/jsp/it/materialMaster/materialMasterList.jsp"/>
+      <forward name="createInSAP" path="/jsp/it/materialMaster/test.jsp"/>
+       <forward name="ROH_Creator" path="/jsp/it/materialMaster/ROH_Creator.jsp"/>
+<forward name="VERP_Creator" path="/jsp/it/materialMaster/VERP_Creator.jsp"/>
+<forward name="finishedProduct_Creator" path="/jsp/it/materialMaster/FinishedProducts_Creator.jsp"/>
+<forward name="HALB_Creator" path="/jsp/it/materialMaster/SemiFinished_Creator.jsp"/>
+<forward name="ZPSR_Creator" path="/jsp/it/materialMaster/ZPSR_Creator.jsp"/>
+<forward name="ZPPC_Creator" path="/jsp/it/materialMaster/ZPPC_Creator.jsp"/>
+<forward name="GeneralMaterial_Creator" path="/jsp/it/materialMaster/GeneralMaterial_Creator.jsp"/>        
+    </action>
+  
+    <action
+      attribute="zpsrForm"
+      input="/jsp/ess/sapMasterRequest/GeneralMaterial/GeneralMaterialList.jsp"
+      name="zpsrForm"
+      parameter="method"
+      path="/zpsr"
+      scope="request"
+      type="com.microlabs.ess.action.ZPSRAction">
+      <forward name="newGeneralMaterial" path="/jsp/ess/sapMasterRequest/GeneralMaterial/GeneralMaterial.jsp"/>  
+       <forward name="newZPSR" path="/jsp/ess/sapMasterRequest/GeneralMaterial/ZPSR.jsp"/>   
+       <forward name="getEquipment" path="/jsp/ess/sapMasterRequest/GeneralMaterial/SearchEquipment.jsp"/>
+       <forward name="apprList" path="/jsp/ess/sapMasterRequest/ApprList.jsp"/>     
+       </action>
+  <action
+      attribute="leaveForm"
+      input="/jsp/admin/userGroup.jsp"
+      name="leaveForm"
+      parameter="method"
+      path="/leave"
+      scope="request"
+      type="com.microlabs.ess.action.LeaveAction">
+     <forward name="newLeaveForm" path="/jsp/ess/leave/applyLeave.jsp"/>
+      <forward name="calculateDays" path="/jsp/ess/leave/leaveCalculateDaysAjax.jsp"/>
+      <forward name="display" path="/jsp/ess/leave/myRequest.jsp"/>
+      <forward name="displayCMS" path="/jsp/ess/essCMS.jsp"/>
+      <forward name="displayCMS1" path="/jsp/ess/essIframecms.jsp"/>
+      <forward name="displayTest" path="/jsp/ess/leave/displayTagExample.jsp"/>
+       <forward name="displayRequest" path="/jsp/ess/leave/forwardRequest.jsp"/>
+       <forward name="forwardEmployeeListForm" path="/jsp/ess/leave/forwardemployeeLists.jsp"/>
+        <forward name="displayDraft" path="/jsp/ess/leave/draftdisplay.jsp"/>
+          <forward name="lvreason" path="/jsp/ess/leave/reasonajax.jsp"/>
+          
+               <forward name="newcomp" path="/jsp/ess/compoff/applycomff.jsp"/>     
+       <forward name="displayUsers" path="/jsp/ess/compoff/displayUsersList.jsp"/>
+       <forward name="compreq" path="/jsp/ess/compoff/compRequests.jsp"/>  
+       <forward name="searchemployee" path="/jsp/ess/compoff/searchApprovers.jsp"/> 
+       <forward name="viewcomoff" path="/jsp/ess/compoff/viewCompoff.jsp"/>  
+       <forward name="compffreport" path="/jsp/ess/compoff/compOffReport.jsp"/>  
+       <forward name="compDraft" path="/jsp/ess/compoff/compDRAFTS.jsp"/>
+       <forward name="updatecomoff" path="/jsp/ess/compoff/updateCompOff.jsp"/>
+         <forward name="updatecompoff" path="/jsp/hr/Reports/updatecompoff.jsp"/>
+            
+        <forward name="newOT" path="/jsp/ess/OVERTIME/applyOT.jsp"/>     
+         <forward name="OTreq" path="/jsp/ess/OVERTIME/OTRequests.jsp"/>  
+         <forward name="OTreport" path="/jsp/ess/OVERTIME/OTReport.jsp"/>  
+           <forward name="viewOT" path="/jsp/ess/OVERTIME/viewOT.jsp"/>  
+        
+         <forward name="draftRecords" path="/jsp/ess/leave/drafts.jsp"/>
+             <forward name="displaySession" path="/jsp/ess/sessionExpired.jsp"/>
+                <forward name="leaveBal" path="/jsp/ess/leave/leaveBalence.jsp"/>
+                <forward name="leavereport" path="/jsp/ess/leave/LeaveReport.jsp"/> 
+                   <forward name="leaveCancel" path="/jsp/ess/leave/cancelLeave.jsp"/> 
+                 <forward name="displayCancelRequest" path="/jsp/ess/leave/CancelLeaveDetails.jsp"/>
+                     <forward name="compofflist" path="/jsp/ess/leave/compofflist.jsp"/>
+                            <forward name="compoffCancel" path="/jsp/ess/compoff/CancelcompRequests.jsp"/> 
+                 <forward name="displayCompoffCancelRequest" path="/jsp/ess/compoff/viewCancelCompoff.jsp"/>               
+                               <forward name="OTCancel" path="/jsp/ess/OVERTIME/CancelOTRequests.jsp"/> 
+                 <forward name="displayOTCancelRequest" path="/jsp/ess/OVERTIME/viewCancelOT.jsp"/>
+                 
+                 <forward name="leavereportsummary" path="/jsp/ess/leave/LeaveSummaryReport.jsp"/>
+    </action>
+    
+  <action attribute="empOfficInfoForm" 
+	 input="/jsp/hr/empOIForm.jsp"
+	 name="empOfficInfoForm" 
+	 parameter="method" 
+	 path="/hrNewEmp" 
+	 scope="request" 
+	 type="com.microlabs.hr.action.EmpOfficalInformationFormAction">
+			
+			<forward name="displayEmployee" path="/jsp/hr/empOfficialInfo/empOIForm.jsp"/>
+			
+			<forward name="EmployeeOfficailInfoList" path="/jsp/hr/empOfficialInfo/empOfficialInformationList.jsp"/>
+			<forward name="modifyEmpOfficialInfo" path="/jsp/hr/empOfficialInfo/modifyempOfficialInformationList.jsp"/>
+				<forward name="searchApprovers" path="/jsp/hr/empOfficialInfo/searchApprovers.jsp"/>
+			
+			
+</action>
+
+	
+  
+ 
+  
+    <action 
+  attribute="permissionForm"
+  path="/permission" 
+  parameter="method"
+  name="permissionForm"
+  scope="request"
+  type="com.microlabs.ess.action.Permission" >
+  <forward name="permission" path="/jsp/ess/permission/permission.jsp"/>
+  <forward name="permissionList" path="/jsp/ess/permission/permissionList.jsp"/>
+    <forward name="permissionrecord" path="/jsp/ess/permission/PermissionReport.jsp"/>
+  
+  <forward name="printPermission" path="/jsp/ess/permission/printPermissionDetails.jsp"/>
+  <forward name="editPermission" path="/jsp/ess/permission/editPermissionDetails.jsp"/>
+   <forward name="cancelpermissionList" path="/jsp/ess/permission/cancelpermlist.jsp"/>
+    <forward name="editcancelPermission" path="/jsp/ess/permission/editcancelrequst.jsp"/>
+     <forward name="forgetswipe" path="/jsp/ess/permission/forgetswipe.jsp"/>
+      <forward name="permissionattListajax" path="/jsp/ess/permission/attendanceajax.jsp"/>
+   <forward name="markattendance" path="/jsp/ess/permission/markattendance.jsp"/>
+    <forward name="markattjax" path="/jsp/ess/permission/markattendanceajax.jsp"/>
+ 
+  </action>
+   <action
+      attribute="onDutyForm"
+      input="/jsp/ess/leave/applyOnDuty.jsp"
+      name="onDutyForm"
+      parameter="method"
+      path="/onDuty"
+      scope="request"
+      type="com.microlabs.ess.action.OnDutyAction">
+       <forward name="applyOnduty" path="/jsp/ess/onDuty/applyOnDuty.jsp"/>
+      <forward name="draftRecords" path="/jsp/ess/onDuty/draftList.jsp"></forward>
+      <forward name="displayDraftDetails" path="/jsp/ess/onDuty/onDutyDraftData.jsp"></forward>
+      <forward name="onDutyList" path="/jsp/ess/onDuty/onDutyList.jsp"></forward>
+      <forward name="onDutydetails" path="/jsp/ess/onDuty/onDutydetails.jsp"></forward>
+      <forward name="calculateDays" path="/jsp/ess/onDuty/onDutyCalculateDaysAjax.jsp"/>
+      <forward name="cancelonDutyList" path="/jsp/ess/onDuty/cancelList.jsp"></forward>
+      <forward name="cancelonDutydetails" path="/jsp/ess/onDuty/CancelonDutydetails.jsp"></forward>
+      <forward name="displayondutyreport" path="/jsp/ess/onDuty/onDutyReport.jsp"></forward>
+       <forward name="Exportondutyreport" path="/jsp/ess/onDuty/ExportonDutyReport.jsp"></forward>
+    </action>
+  
+  <action
+      attribute="serviceMasterRequestForm"
+      input="/jsp/ess/sapMasterRequest/vendorMasterRequest.jsp"
+      name="serviceMasterRequestForm"
+      parameter="method"
+      path="/serviceMasterRequest"
+      scope="session"
+      type="com.microlabs.ess.action.ServiceMasterRequestAction">
+      <forward name="display" path="/jsp/ess/sapMasterRequest/serviceMaster/serviceMasterRequest.jsp" />
+      <forward name="displayList" path="/jsp/ess/sapMasterRequest/serviceMaster/serviceMasterList.jsp" />
+      <forward name="SermasterSearch" path="/jsp/ess/sapMasterRequest/serviceMaster/serviceMasterRequestSearch.jsp" />
+       <forward name="approverMaster" path="/jsp/ess/sapMasterRequest/serviceMaster/serviceMasterRequest_Approve.jsp" />
+        <forward name="serviceMasterSAP" path="/jsp/ess/sapMasterRequest/serviceMaster/serviceMasterRequest_SAP.jsp" />
+           <forward name="SermasterView" path="/jsp/ess/sapMasterRequest/serviceMaster/serviceMasterRequestView.jsp" />
+           <forward name="apprList" path="/jsp/ess/sapMasterRequest/ApprList.jsp"/> 
+    </action>
+    
+     <action
+      attribute="reportRequestForm"
+      input="/jsp/ess/sapMasterRequest/Report/reportRequestList.jsp"
+      name="reportRequestForm"
+      parameter="method"
+      path="/reportRequest"
+      scope="request"
+      type="com.microlabs.ess.action.ReportRequestAction">
+   <forward name="display" path="/jsp/ess/sapMasterRequest/Report/reportRequestList.jsp" />
+      <forward name="displayList" path="/jsp/ess/sapMasterRequest/Report/reoportRequest.jsp" />
+       <forward name="displayReport" path="/jsp/ess/sapMasterRequest/Report/genrateReport.jsp" />
+        <forward name="serviceReport" path="/jsp/ess/sapMasterRequest/Report/serviceReport.jsp" />
+         <forward name="customerReport" path="/jsp/ess/sapMasterRequest/Report/customerReport.jsp" />
+          <forward name="vendorReport" path="/jsp/ess/sapMasterRequest/Report/vendorReport.jsp" />
+      
+    </action> 
+  
+   <action
+      attribute="materialCodeExtenstionForm"
+      input="/jsp/ess/sapMasterRequest/MaterialExtension/MaterialExtension.jsp"
+      name="materialCodeExtenstionForm"
+      parameter="method"
+      path="/materialCodeExtenstion"
+      scope="request"
+      type="com.microlabs.ess.action.MaterialCodeExtensionAction">
+      <forward name="displayNewForm" path="/jsp/ess/sapMasterRequest/MaterialExtension/MaterialExtension.jsp"/>
+       <forward name="displayList" path="/jsp/ess/sapMasterRequest/MaterialExtension/MaterialExtenstionList.jsp"/>
+       <forward name="approverMaster" path="/jsp/ess/sapMasterRequest/MaterialExtension/MaterialExtension_Approve.jsp"/>
+       <forward name="codeExtenstionSAP" path="/jsp/ess/sapMasterRequest/MaterialExtension/MaterialExtension.jsp"/>
+       <forward name="viewCode" path="/jsp/ess/sapMasterRequest/MaterialExtension/ViewMaterialExtension.jsp"/>
+       
+       </action>
+        <action
+      attribute="generalMaterialForm"
+      input="/jsp/ess/sapMasterRequest/GeneralMaterial/GeneralMaterialList.jsp"
+      name="generalMaterialForm"
+      parameter="method"
+      path="/generalMaterial"
+      scope="request"
+      type="com.microlabs.ess.action.GeneralMaterialAction">
+      <forward name="generalMaterialList" path="/jsp/ess/sapMasterRequest/GeneralMaterial/GeneralMaterialList.jsp"/>
+       <forward name="newGeneralMaterial" path="/jsp/ess/sapMasterRequest/GeneralMaterial/GeneralMaterial.jsp"/>   
+         <forward name="approverMaster" path="/jsp/ess/sapMasterRequest/GeneralMaterial/GeneralMaterial_Approve.jsp"/>
+           <forward name="generalMaterialSAP" path="/jsp/ess/sapMasterRequest/GeneralMaterial/GeneralMaterial_SAP.jsp"/> 
+           <forward name="apprList" path="/jsp/ess/sapMasterRequest/ApprList.jsp"/>   
+       </action>
+      <action
+      attribute="promotionalForm"
+      input="/jsp/ess/sapMasterRequest/Promotional/PromotionalList.jsp"
+      name="promotionalForm"
+      parameter="method"
+      path="/promotional"
+      scope="request"
+      type="com.microlabs.ess.action.PromotionalAction">
+      <forward name="promotionalList" path="/jsp/ess/sapMasterRequest/Promotional/PromotionalList.jsp"/>
+       <forward name="newPromotional" path="/jsp/ess/sapMasterRequest/Promotional/Promotional.jsp"/> 
+       <forward name="approverMaster" path="/jsp/ess/sapMasterRequest/Promotional/Promotional_Approve.jsp"/>
+        <forward name="promotionalSAP" path="/jsp/ess/sapMasterRequest/Promotional/Promotional_SAP.jsp"/>  
+        <forward name="apprList" path="/jsp/ess/sapMasterRequest/ApprList.jsp"/>      
+       </action>
+      
+      
+      <action
+      attribute="semiFinshedForm"
+      input="/jsp/ess/sapMasterRequest/SemiFinished/SemiFinishedList.jsp"
+      name="semiFinshedForm"
+      parameter="method"
+      path="/semifinished"
+      scope="request"
+      type="com.microlabs.ess.action.SemiFinishedAction">
+      <forward name="semiFinishedProductList" path="/jsp/ess/sapMasterRequest/SemiFinished/SemiFinishedList.jsp"/>
+       <forward name="newSemiFinishedProduct" path="/jsp/ess/sapMasterRequest/SemiFinished/SemiFinished.jsp"/>  
+        <forward name="approverMaster" path="/jsp/ess/sapMasterRequest/SemiFinished/SemiFinished_Approve.jsp"/>
+        <forward name="semifinishedSAP" path="/jsp/ess/sapMasterRequest/SemiFinished/SemiFinished_SAP.jsp"/> 
+        <forward name="apprList" path="/jsp/ess/sapMasterRequest/ApprList.jsp"/>     
+       </action> 
+      
+      
+      <action
+      attribute="finishedProductForm"
+      input="/jsp/ess/sapMasterRequest/FinishedProduct/FinishedProductsList.jsp"
+      name="finishedProductForm"
+      parameter="method"
+      path="/finishedProduct"
+      scope="request"
+      type="com.microlabs.ess.action.FinishedProductAction">
+      <forward name="finishedProductList" path="/jsp/ess/sapMasterRequest/FinishedProduct/FinishedProductsList.jsp"/>
+       <forward name="newFinishedProduct" path="/jsp/ess/sapMasterRequest/FinishedProduct/FinishedProducts.jsp"/>    
+        <forward name="approverMaster" path="/jsp/ess/sapMasterRequest/FinishedProduct/FinishedProducts_Approve.jsp"/>
+        <forward name="finishedProductSAP" path="/jsp/ess/sapMasterRequest/FinishedProduct/FinishedProducts_SAP.jsp"/>
+         <forward name="apprList" path="/jsp/ess/sapMasterRequest/ApprList.jsp"/>   
+       </action> 
+       
+        <action
+      attribute="materialCodeForm"
+      input="/jsp/ess/sapMasterRequest/MaterialCodeRequest/MaterialCodeList.jsp"
+      name="materialCodeForm"
+      parameter="method"
+      path="/materialCode"
+      scope="request"
+      type="com.microlabs.ess.action.MaterialCodeRequestAction">
+      <forward name="materialcodeList" path="/jsp/ess/sapMasterRequest/MaterialCodeRequest/MaterialCodeList.jsp"/>
+       <forward name="newMaterialCodeRequest" path="/jsp/ess/sapMasterRequest/MaterialCodeRequest/newMaterialCode.jsp"/>
+          <forward name="ROHDetails" path="/jsp/ess/sapMasterRequest/MaterialCodeRequest/ROH.jsp"/>
+       <forward name="pacmaterial" path="/jsp/ess/sapMasterRequest/MaterialCodeRequest/VERP.jsp"/>
+       <forward name="semimaterial" path="/jsp/ess/sapMasterRequest/MaterialCodeRequest/SemiFinished.jsp"/>
+       <forward name="finmaterial" path="/jsp/ess/sapMasterRequest/MaterialCodeRequest/FinishedProducts.jsp"/>
+       <forward name="genmaterial" path="/jsp/ess/sapMasterRequest/MaterialCodeRequest/GeneralMaterial.jsp"/>
+       <forward name="planmaterial" path="/jsp/ess/sapMasterRequest/MaterialCodeRequest/ZPSR.jsp"/>
+       <forward name="promaterial" path="/jsp/ess/sapMasterRequest/MaterialCodeRequest/ZPPC.jsp"/>
+      <forward name="materialSearchList" path="/jsp/ess/sapMasterRequest/MaterialCodeRequest/materialCodeSearch.jsp"/>
+       </action>
+       <action
+      attribute="PackageMaterialMasterForm"
+      input="/jsp/ess/sapMasterRequest/PackageMaterial/PackageMaterialList.jsp"
+      name="packagingMaterialForm"
+      parameter="method"
+      path="/packageMaterial"
+      scope="request"
+      type="com.microlabs.ess.action.PackageMaterialMasterAction">
+      <forward name="packageMaterialList" path="/jsp/ess/sapMasterRequest/PackageMaterial/PackageMaterialList.jsp"/>
+      <forward name="newPackageMaterial" path="/jsp/ess/sapMasterRequest/PackageMaterial/PackageMaterial.jsp"/>
+      <forward name="PackageMaterialSAP" path="/jsp/ess/sapMasterRequest/PackageMaterial/PackageMaterial_SAP.jsp"></forward>
+      <forward name="approverMaster" path="/jsp/ess/sapMasterRequest/PackageMaterial/PackageMaterial_Approve.jsp"/>
+      <forward name="apprList" path="/jsp/ess/sapMasterRequest/ApprList.jsp"/>
+       </action>
+       
+       
+        <action
+      attribute="rawMaterialForm"
+      input="/jsp/ess/sapMasterRequest/MaterialCodeMaster/MaterialCodeMasterList.jsp"
+      name="rawMaterialForm"
+      parameter="method"
+      path="/rawMaterial"
+      scope="request"
+      type="com.microlabs.ess.action.RawMaterialAction">
+	      <forward name="masterList" path="/jsp/ess/sapMasterRequest/RawMaterial/RawMaterialList.jsp"/>
+	      <forward name="newMasterForm" path="/jsp/ess/sapMasterRequest/RawMaterial/RawMaterial.jsp"/>
+	      <forward name="approverMaster" path="/jsp/ess/sapMasterRequest/RawMaterial/RawMaterial_Approve.jsp"/>
+	      <forward name="rawmaterialSAP" path="/jsp/ess/sapMasterRequest/RawMaterial/RawMaterial_SAP.jsp"/>
+	      <forward name="apprList" path="/jsp/ess/sapMasterRequest/ApprList.jsp"/>
+       </action>
+       <action
+      attribute="customerMasterForm"
+      input="/jsp/ess/customerMaster/customerMaster.jsp"
+      name="customerMasterForm"
+      parameter="method"
+      path="/customerMaster"
+      scope="request"
+      type="com.microlabs.ess.action.CustomerMasterAction">
+      
+      <forward name="customerList" path="/jsp/ess/sapMasterRequest/customerMaster/customerMasterList.jsp"/>
+      <forward name="display" path="/jsp/ess/sapMasterRequest/customerMaster/customerMaster.jsp"/>
+           <forward name="approverMaster" path="/jsp/ess/sapMasterRequest/customerMaster/customerMaster_Approve.jsp"/>
+      <forward name="customerMasterSAP" path="/jsp/ess/sapMasterRequest/customerMaster/customerMaster_SAP.jsp"/>
+       <forward name="CustomerMasterView" path="/jsp/ess/sapMasterRequest/customerMaster/CustomerMasterView.jsp"/>
+           <forward name="CustomerMasterSearch" path="/jsp/ess/sapMasterRequest/customerMaster/customerMasterSearch.jsp"/>
+           <forward name="apprList" path="/jsp/ess/sapMasterRequest/ApprList.jsp"/>
+    </action>
+   
+  
+  
+  <action
+      attribute="approvalLevelsForm"
+      input="/jsp/ess/leave/approvalLeaveLevels.jsp"
+      name="approvalLevelsForm"
+      parameter="method"
+      path="/approvalLevels"
+      scope="request"
+      type="com.microlabs.ess.action.ApprovalLevelsAction">
+      <forward name="display" path="/jsp/ess/leave/approvalLeaveLevels.jsp"/>
+      <forward name="displayEmplist" path="/jsp/ess/leave/employeeLists.jsp"/>
+      
+    </action>
+    
+    
+   <action
+      attribute="joiningFormalityForm"
+      input="/jsp/ess/joiningformality/joiningformality.jsp"
+      name="joiningFormalityForm"
+      parameter="method"
+      path="/ess"
+      scope="session"
+      type="com.microlabs.ess.action.JoiningFormalityAction">
+      <forward name="display" path="/jsp/ess/joiningformality/joiningformality.jsp" />
+      <forward name="display1" path="/jsp/ess/joiningformality/joiningformalitycms.jsp" />
+      <forward name="displaytemp" path="/jsp/ess/joiningformality/joiningformalitycmstemp.jsp" />
+    </action>
+    
+    <action attribute="delegateForm" input="/jsp/ess/Delegation/Delegate.jsp" name="delegateForm" parameter="method" path="/delegate" scope="session" type="com.microlabs.ess.action.DelegationAction">
+      <forward name="displayDelegate" path="/jsp/ess/Delegation/Delegate.jsp" />
+      <forward name="searchUser" path="/jsp/admin/authentication/searchUsers.jsp"/>
+    </action>
+    
+    
+    <action
+      attribute="emppersonalForm"
+      input="/jsp/ess/employeepersonalinfo/employeepersonalinfo.jsp"
+      name="emppersonalForm"
+      parameter="method"
+      path="/employeepersonalinfo"
+      scope="session"
+      type="com.microlabs.ess.action.EmployeePersonalInfoAction">
+      <forward name="display" path="/jsp/ess/employeepersonalinfo/employeepersonalinfo.jsp" />
+      <forward name="display1" path="/jsp/ess/employeepersonalinfo/employeepersonalinfocms.jsp" />
+      
+    </action>
+  
+  <action
+	  attribute="employeeOfficialInfoForm"
+      input="/jsp/ess/employeepersonalinfo/employeepersonalinfo.jsp"
+      name="employeeOfficialInfoForm"
+      parameter="method"
+      path="/empofficial"
+      scope="session"
+      type="com.microlabs.ess.action.EmployeeOfficialInfoAction">
+      <forward name="display" path="/jsp/ess/employeeofficialinfo/empofficialinfo.jsp" />
+      <forward name="display1" path="/jsp/ess/employeeofficialinfo/empofficialinfocms.jsp" />
+      <forward name="displayOfficial" path="/jsp/ess/employeeofficialinfo/empofficialinfo.jsp" />
+     <forward name="displayAssets" path="/jsp/ess/employeeofficialinfo/Assets.jsp" />
+      <forward name="viewHRassetform" path="/jsp/ess/employeeofficialinfo/HRAssetViewForm.jsp" />
+    </action>
+  
+  
+  <action
+      attribute="vendorMasterRequestForm"
+      input="/jsp/ess/sapMasterRequest/vendorMasterRequest.jsp"
+      name="vendorMasterRequestForm"
+      parameter="method"
+      path="/vendorMasterRequest"
+      scope="session"
+      type="com.microlabs.ess.action.VendorMasterRequestAction">
+      <forward name="display" path="/jsp/ess/sapMasterRequest/vendorMasterRequest.jsp" />
+      <forward name="displayCMS" path="/jsp/ess/sapMasterRequest/sapMasterCMS.jsp" />
+      <forward name="vendorMasterList" path="/jsp/ess/sapMasterRequest/vendorMasterList.jsp" />
+      <forward name="displayCMS1" path="/jsp/ess/sapMasterRequest/sapMasterIframecms.jsp"/>
+      <forward name="displayTable" path="/jsp/ess/sapMasterRequest/vendorMast.jsp" />
+       <forward name="approverMaster" path="/jsp/ess/sapMasterRequest/vendorMasterRequest_Approve.jsp"/>
+            <forward name="vendorMasterSAP" path="/jsp/ess/sapMasterRequest/vendorMasterRequest_SAP.jsp"/>
+         <forward name="vendorMasterView" path="/jsp/ess/sapMasterRequest/vendorMasterRequestView.jsp" />
+           <forward name="vendorMasterSearch" path="/jsp/ess/sapMasterRequest/vendorMasterSearch.jsp" />
+         <forward name="apprList" path="/jsp/ess/sapMasterRequest/ApprList.jsp"/>
+    </action>
+
+<action
+      attribute="attendenceForm"
+      input="/jsp/ess/viewAttendence/attendence.jsp"
+      name="attendenceForm"
+      parameter="method"
+      path="/attendence"
+      scope="request"
+      type="com.attendence.action.AttendenceAction">
+      
+      <forward name="home" path="/jsp/ess/viewAttendence/attendence.jsp" />
+      <forward name="start" path="/jsp/ess/viewAttendence/start.jsp" />
+      </action>
+      
+      <action
+      attribute="payslipForm"
+      input="/jsp/ess/payslip/payslip.jsp"
+      name="payslipForm"
+      parameter="method"
+      path="/payslip"
+      scope="request"
+      type="com.microlabs.ess.payslip.action.PayslipAction">
+      
+      <forward name="home" path="/jsp/ess/payslip/payslip.jsp" />
+      <forward name="start" path="/jsp/ess/payslip/start.jsp" />
+      <forward name="print" path="/jsp/ess/payslip/print.jsp" />
+       <forward name="testJsp" path="/jsp/ess/payslip/test.jsp" />
+       <forward name="paySlipAjax" path="/jsp/ess/payslip/paySlipAjax.jsp" />
+       
+      </action>
+    
+    <action attribute="crbForm" path="/crbook" parameter="method" name="crbForm" scope="request" type="com.microlabs.ess.action.ConfRoomBookingAction" >
+    	<forward name="displayCRB" path="/jsp/ess/ConfRoomBooking/newCRB.jsp"/>
+  	</action>
+  
+      <action
+      attribute="travelRequestForm"
+      input="/jsp/admin/userGroup.jsp"
+      name="travelRequestForm"
+      parameter="method"
+      path="/travelrequest"
+      scope="session"
+      type="com.microlabs.ess.action.TravelRequestAction">
+        <forward name="domesticformrequest" path="/jsp/ess/TravelRequest/domestic_req.jsp"/>
+        <forward name="domestic" path="/jsp/ess/TravelRequest/domestic.jsp"></forward>
+          <forward name="apprList" path="/jsp/ess/TravelRequest/TraveldeskAppr.jsp"></forward>
+            <forward name="travelAjax" path="/jsp/ess/TravelRequest/travelAjax.jsp"></forward>
+             <forward name="travelAjax2" path="/jsp/ess/TravelRequest/travelAjax2.jsp"></forward>
+        
+         <forward name="revertdomestic" path="/jsp/ess/TravelRequest/revertdomestic.jsp"></forward>
+          <forward name="editdomestic" path="/jsp/ess/TravelRequest/editdomestic.jsp"></forward>
+           <forward name="editmypage" path="/jsp/ess/TravelRequest/editmypage.jsp"></forward>
+        <forward name="domestic_rep" path="/jsp/ess/TravelRequest/domestic_rep.jsp"></forward>
+        <forward name="travellerList" path="/jsp/ess/TravelRequest/travellerList.jsp"></forward>
+        <forward name="billerList" path="/jsp/ess/TravelRequest/billerList.jsp"></forward>
+
+
+        <forward name="internationalformrequest" path="/jsp/ess/TravelRequest/international.jsp"/>
+        <forward name="mytravellist" path="/jsp/ess/TravelRequest/MytravelList.jsp"/>
+        <forward name="MyFinanceList" path="/jsp/ess/TravelRequest/MyFinanceList.jsp"/>
+        <forward name="MyFinanceReceieveList" path="/jsp/ess/TravelRequest/MyFinanceReceieveList.jsp"/>
+        <forward name="viewbillerList" path="/jsp/ess/TravelRequest/viewbillerList.jsp"></forward>
+
+        <forward name="viewrecievebillerList" path="/jsp/ess/TravelRequest/viewrecievebillerList.jsp"></forward>
+        <forward name="viewverifybillupload" path="/jsp/ess/TravelRequest/viewverifybillupload.jsp"></forward>
+
+        <forward name="viewmyrequest" path="/jsp/ess/TravelRequest/viewRequest.jsp"/>
+        <forward name="mytravelBookinglist" path="/jsp/ess/TravelRequest/MyBookingList.jsp"/>
+        <forward name="viewbookingrequest" path="/jsp/ess/TravelRequest/viewbookingRequest.jsp"/>
+        <forward name="mytravelConfirmationlist" path="/jsp/ess/TravelRequest/MyConfirmationList.jsp"/>
+        <forward name="displayReportDetails" path="/jsp/ess/TravelRequest/displayReportDetails.jsp"/>
+
+        <forward name="viewconfirmrequest" path="/jsp/ess/TravelRequest/viewConfirmRequest.jsp"/>
+        <forward name="searchemployee" path="/jsp/ess/TravelRequest/searchApprovers.jsp"/>
+        <forward name="travellerlistAjax" path="/jsp/ess/TravelRequest/travellerlistAjax.jsp"/>
+        <forward name="traveldate" path="/jsp/ess/TravelRequest/travelcheckingAjax.jsp"/>
+        <forward name="travelmode" path="/jsp/ess/TravelRequest/travelmodeAjax.jsp"/>
+        <forward name="approvePage" path="/jsp/ess/TravelRequest/approvl.jsp"/>
+
+        <forward name="viewDetails" path="/jsp/ess/TravelRequest/viewDetails.jsp"/>
+        <forward name="travelDesk" path="/jsp/ess/TravelRequest/travelDeskAjax.jsp"/>
+        <forward name="serviceclass" path="/jsp/ess/TravelRequest/serviceclassAjax.jsp"/> 
+        
+        
+    </action>
+  
+  </action-mappings>
+  <message-resources parameter="com.yourcompany.struts.ApplicationResources" />
+</struts-config>

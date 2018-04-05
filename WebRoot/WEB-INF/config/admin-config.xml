@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<data-sources/>
+	<form-beans>
+		<form-bean name="userGroupForm" type="com.microlabs.admin.form.UserGroupForm"/>
+		<form-bean name="modifyUserGroupForm" type="com.microlabs.admin.form.ModifyUserGroupForm"/>
+		<form-bean name="userForm" type="com.microlabs.admin.form.UserForm"/>
+		<form-bean name="userReportsForm" type="com.microlabs.admin.form.UserReportsForm"/>
+		<form-bean name="userRightsForm" type="com.microlabs.admin.form.UserRightsForm"/>
+		<form-bean name="changePasswordForm" type="com.microlabs.admin.form.ChangePasswordForm"/>
+		<form-bean name="activateUserForm" type="com.microlabs.admin.form.ActivateUserForm"/>
+		<form-bean name="securityQuestionsForm" type="com.microlabs.admin.form.SecurityQuestionsForm"/>
+		<form-bean name="adminHolidayForm" type="com.microlabs.admin.form.HolidayForm"/>
+		<form-bean name="announcementForm" type="com.microlabs.admin.form.AnnouncementForm"/>
+		<form-bean name="subLinkArchiveForm" type="com.microlabs.admin.form.SubLinkArchiveForm"/>
+		<form-bean name="subsubLinkArchiveForm" type="com.microlabs.admin.form.SubSubLinkArchiveForm"/>
+		<form-bean name="authenticationForm" type="com.microlabs.admin.form.AuthenticationForm"/>
+		<form-bean name="newArchiveForm" type="com.microlabs.admin.form.ArchievForm"/>
+		<form-bean name="addExistingEMPForm" type="com.microlabs.admin.form.EmpCreationForm"/>
+		<form-bean name="newProductForm" type="com.microlabs.admin.form.ProductForm"/>
+		<form-bean name="manageCMSForm" type="com.microlabs.newsandmedia.form.ManageCMSForm"/>
+		<form-bean name="materialApproverForm" type="com.microlabs.admin.form.MaterialApproverForm"/>
+		<form-bean name="thoughtForm" type="com.microlabs.admin.form.ThoughtForm"/>
+		<form-bean name="loginUsersForm" type="com.microlabs.admin.form.LoginUsersForm"/>
+		<form-bean name="essApproverForm" type="com.microlabs.admin.form.ESSApproverForm"/>
+		<form-bean name="galleryForm" type="com.microlabs.admin.form.GalleryForm"/>
+		<form-bean name="itApproverForm" type="com.microlabs.admin.form.ITApproverForm"/>
+		<form-bean name="helpdeskReportForm" type="com.microlabs.admin.form.HelpDeskReportForm"/>
+		<form-bean name="CmpCalForm" type="com.microlabs.admin.form.CalenderForm"/>
+		<form-bean name="conferenceApprForm" type="com.microlabs.admin.form.ConferenceApprForm"/>
+<form-bean name="vcApprForm" type="com.microlabs.admin.form.VCApprForm"/>
+<form-bean name="portalStatusForm" type="com.microlabs.admin.form.PortalStatusForm"/>
+<form-bean name="alertForm" type="com.microlabs.admin.form.AlertForm"/>
+	</form-beans>
+	<global-exceptions/>
+	<global-forwards/>
+	<action-mappings>
+	
+	
+		    <action attribute="alertForm" input="/jsp/admin/conferenceApprovers/ConferenceApprsList.jsp"
+	 name="alertForm" 
+	 parameter="method" 
+	 path="/alert" 
+	 scope="request"
+	 type="com.microlabs.admin.action.AlertAction">
+
+	 <forward name="alertView" path="/jsp/admin/alert/alertReport.jsp"></forward>
+	 <forward name="addnewAlert" path="/jsp/admin/alert/AddnewAlert.jsp"></forward>
+
+	 </action> 
+	
+	 <action attribute="portalStatusForm" input="/jsp/admin/conferenceApprovers/ConferenceApprsList.jsp"
+	 name="portalStatusForm" 
+	 parameter="method" 
+	 path="/portalStatus" 
+	 scope="request"
+	 type="com.microlabs.admin.action.PortalStatusAction">
+	  
+	    <forward name="displayAll" path="/jsp/admin/PortalStatus/displaylinks.jsp"></forward>
+	   <forward name="exportdata" path="/jsp/admin/PortalStatus/exportdata.jsp"></forward>
+	</action>
+	
+	<action attribute="vcApprForm" input="/jsp/admin/conferenceApprovers/ConferenceApprsList.jsp"
+	 name="vcApprForm" 
+	 parameter="method" 
+	 path="/vcAppr" 
+	 scope="request"
+	 type="com.microlabs.admin.action.VCApprAction">
+	  
+	    <forward name="approversList" path="/jsp/admin/VCApprovers/VCApprsList.jsp"></forward>
+	    <forward name="newApprovers" path="/jsp/admin/VCApprovers/VCApprs.jsp"></forward>
+	    <forward name="searchITApprovers" path="/jsp/admin/VCApprovers/searchITApprovers.jsp"></forward>
+	     <forward name="floorajax" path="/jsp/admin/VCApprovers/floorAjax.jsp"></forward>
+	     <forward name="roomAjax" path="/jsp/admin/VCApprovers/roomAjax.jsp"></forward>
+	    <forward name="editApprovers" path="/jsp/admin/VCApprovers/editApprs.jsp"></forward> 
+	    <forward name="confroomList" path="/jsp/admin/VCApprovers/manageconfroom.jsp"></forward> 
+	    <forward name="addnewconference" path="/jsp/admin/VCApprovers/addnewconf.jsp"></forward>  
+	</action>
+	
+	<action attribute="conferenceApprForm" input="/jsp/admin/conferenceApprovers/ConferenceApprsList.jsp"
+	 name="conferenceApprForm" 
+	 parameter="method" 
+	 path="/conferenceAppr" 
+	 scope="request"
+	 type="com.microlabs.admin.action.ConferenceApprAction">
+	  
+	    <forward name="approversList" path="/jsp/admin/conferenceApprovers/ConferenceApprsList.jsp"></forward>
+	    <forward name="newApprovers" path="/jsp/admin/conferenceApprovers/ConferenceApprs.jsp"></forward>
+	    <forward name="searchITApprovers" path="/jsp/admin/conferenceApprovers/searchITApprovers.jsp"></forward>
+	     <forward name="floorajax" path="/jsp/admin/conferenceApprovers/floorAjax.jsp"></forward>
+	     <forward name="roomAjax" path="/jsp/admin/conferenceApprovers/roomAjax.jsp"></forward>
+	    <forward name="editApprovers" path="/jsp/admin/conferenceApprovers/editApprs.jsp"></forward> 
+	    <forward name="confroomList" path="/jsp/admin/conferenceApprovers/manageconfroom.jsp"></forward> 
+	    <forward name="addnewconference" path="/jsp/admin/conferenceApprovers/addnewconf.jsp"></forward>  
+	</action>
+	<action attribute="CmpCalForm" input="/jsp/admin/approvers/CmpCalForm.jsp"
+	 name="CmpCalForm" 
+	 parameter="method" 
+	 path="/cmpCalender" 
+	 scope="request"
+	 type="com.microlabs.admin.action.CalenderAction">
+	  
+	    <forward name="displayCalender" path="/jsp/admin/cmpCalender/CmpCalender.jsp"></forward>
+   <forward name="displayCalenderlist" path="/jsp/admin/cmpCalender/CmpCalendarList.jsp"></forward>
+	</action>
+		<action attribute="helpdeskReportForm" input="/jsp/admin/HelpDeskReport/displayReport.jsp"
+	 name="helpdeskReportForm" 
+	 parameter="method" 
+	 path="/helpDeskReport" 
+	 scope="request"
+	 type="com.microlabs.admin.action.HelpDeskReportAction">
+	 	<forward name="displayreport" path="/jsp/admin/HelpDeskReport/displayReport.jsp"/>
+         <forward name="displayrequests" path="/jsp/admin/HelpDeskReport/reportView/displayList.jsp"/>
+          <forward name="viewAduserCreationform"  path="/jsp/admin/HelpDeskReport/reportView/viewAdUserCreation.jsp"/>         
+     	<forward name="viewFtpAccessform"  path="/jsp/admin/HelpDeskReport/reportView/viewFTPAccess.jsp"/> 
+     	<forward name="displayITReport"  path="/jsp/admin/HelpDeskReport/itReport.jsp"/>
+     	<forward name="exportITIssues"  path="/jsp/admin/HelpDeskReport/exportITIssues.jsp"/>
+     	<forward name="summaryAjax"  path="/jsp/admin/HelpDeskReport/summaryAjax.jsp"/>
+     	<forward name="viewNewSapRequestform"  path="/jsp/admin/HelpDeskReport/viewsapitissueuser.jsp"/>
+     	<forward name="pickupSelectedIssue" path="/jsp/admin/HelpDeskReport/IssueDetails.jsp"/>
+     	<forward name="viewFolderAccessform"  path="/jsp/admin/HelpDeskReport/reportView/viewFolderAccess.jsp"/>
+     	<forward name="viewNewITAssetform"  path="/jsp/admin/HelpDeskReport/reportView/viewNewITAsset.jsp"/>
+     	<forward name="viewAduserDeletionform"  path="/jsp/admin/HelpDeskReport/reportView/viewAdUserDeletion.jsp"/>
+     	<forward name="viewAduserTransferform"  path="/jsp/admin/HelpDeskReport/reportView/viewAdUserTransfer.jsp"/>
+     	<forward name="viewLotusIDCreationform"  path="/jsp/admin/HelpDeskReport/reportView/viewLotusIdCreation.jsp"/>
+     	<forward name="viewLotusIDChangeform"  path="/jsp/admin/HelpDeskReport/reportView/viewLotusIdChange.jsp"/>
+     	<forward name="viewLotusIDDeletionform"  path="/jsp/admin/HelpDeskReport/reportView/viewLotusIdDeletion.jsp"/>
+     	<forward name="viewInternetAccessform"  path="/jsp/admin/HelpDeskReport/reportView/viewInternetAccess.jsp"/>
+     	<forward name="viewexternaldrivesform"  path="/jsp/admin/HelpDeskReport/reportView/viewExternalDrives.jsp"/>
+     	<forward name="viewNewITSparesform"  path="/jsp/admin/HelpDeskReport/reportView/viewNewSpareAsset.jsp"/>
+     	
+		
+	</action>
+	<action attribute="itApproverForm" input="/jsp/admin/ITApprover/EmpList.jsp"
+	 name="itApproverForm" 
+	 parameter="method" 
+	 path="/itApprover" 
+	 scope="request"
+	 type="com.microlabs.admin.action.ITApproverAction">
+	         <forward name="newapprover" path="/jsp/admin/ITApprover/EmpList.jsp"/>
+	      <forward name="addApprover" path="/jsp/admin/ITApprover/AddITapprover.jsp"/>
+	      <forward name="searchITApprovers" path="/jsp/admin/ITApprover/searchITApprovers.jsp"></forward>
+	       <forward name="adminsubcategoryajax" path="/jsp/admin/ITApprover/subcatajax.jsp"></forward>
+	</action>
+	<action attribute="galleryForm" input="/jsp/admin/Gallery/Gallery.jsp"
+	 name="galleryForm" 
+	 parameter="method" 
+	 path="/gallery" 
+	 scope="request"
+	 type="com.microlabs.admin.action.GalleryAction">
+	     <forward name="displayGalleryList" path="/jsp/admin/Gallery/GalleryList.jsp"/>
+	     <forward name="newGallery" path="/jsp/admin/Gallery/Gallery.jsp"/>
+	     <forward name="modifyGallery" path="/jsp/admin/Gallery/ModifyGallery.jsp"/>
+	</action>
+	<action attribute="essApproverForm" input="/jsp/admin/Thoughts/thoughtList.jsp"
+	 name="essApproverForm" 
+	 parameter="method" 
+	 path="/essApprover" 
+	 scope="request"
+	 type="com.microlabs.admin.action.ESSApproverAction">
+	  
+	    <forward name="employyList" path="/jsp/admin/ESSApprover/employeeList.jsp"></forward>
+	    <forward name="addApprover" path="/jsp/admin/ESSApprover/addApprover.jsp"></forward>
+	    <forward name="searchApprovers" path="/jsp/admin/ESSApprover/searchApprovers.jsp"/>
+  
+	</action>
+	<action attribute="loginUsersForm" input="/jsp/admin/loginUsers/LoginUsersDetails.jsp"
+	 name="loginUsersForm" 
+	 parameter="method" 
+	 path="/loginUser" 
+	 scope="request"
+	 type="com.microlabs.admin.action.LoginUsersAction">
+	  
+	    <forward name="loginUsersList" path="/jsp/admin/loginUsers/LoginUsersDetails.jsp"></forward>
+	</action>
+	<action attribute="ThoughtForm" input="/jsp/admin/Thoughts/thoughtList.jsp"
+	 name="thoughtForm" 
+	 parameter="method" 
+	 path="/thought" 
+	 scope="request"
+	 type="com.microlabs.admin.action.ThoughtAction">
+	  
+	    <forward name="Thought" path="/jsp/admin/Thoughts/thoughtList.jsp"></forward>
+	    <forward name="NewThought" path="/jsp/admin/Thoughts/thoughts.jsp"></forward>
+  
+	</action>
+	<action attribute="materialApproverForm" input="/jsp/admin/approvers/displayApprovers.jsp"
+	 name="materialApproverForm" 
+	 parameter="method" 
+	 path="/materialApprover" 
+	 scope="request"
+	 type="com.microlabs.admin.action.MaterialApproverAction">
+	  <forward name="displayApprovers" path="/jsp/admin/approvers/displayApprovers.jsp"/>
+	   <forward name="newMasterType" path="/jsp/admin/approvers/newMasterType.jsp"/>
+	  <forward name="displayUsers" path="/jsp/admin/approvers/displayUsersList.jsp"></forward>
+	</action>
+		<action attribute="manageCMSForm" input="/jsp/newsAndMedia/manageCMS/manageCMSList.jsp" name="manageCMSForm" parameter="method" path="/manageCMS" scope="request" type="com.microlabs.newsandmedia.action.ManageCMSAction">
+			<forward name="menuList" path="/jsp/newsAndMedia/manageCMS/manageCMSList.jsp"/>
+			<forward name="displayMainLinks" path="/jsp/newsAndMedia/manageCMS/manageCMS.jsp"/>
+			<forward name="sublinkAjax" path="/jsp/newsAndMedia/manageCMS/sublinkAjax.jsp"/>
+			<forward name="subsublinkAjax" path="/jsp/newsAndMedia/manageCMS/getSubSubLinkAjax.jsp"/>
+		</action>
+		<action attribute="newArchiveForm" input="/jsp/admin/newAuthention.jsp" name="newArchiveForm" parameter="method" path="/newArchieve" scope="request" type="com.microlabs.admin.action.ArchievAction">
+			<forward name="menuList" path="/jsp/admin/archive/menuList.jsp"/>
+			<forward name="displayMainLinks" path="/jsp/admin/archive/Archive.jsp"/>
+			<forward name="sublinkAjax" path="/jsp/admin/archive/sublinkAjax.jsp"/>
+			<forward name="subsublinkAjax" path="/jsp/admin/archive/getSubSubLinkAjax.jsp"/>
+		</action>
+		<action attribute="authenticationForm" input="/jsp/admin/newAuthention.jsp" name="authenticationForm" parameter="method" path="/authentication" scope="request" type="com.microlabs.admin.action.AuthenticationAction">
+			<forward name="display" path="/jsp/admin/authentication/newAuthentication.jsp"/>
+			<forward name="getDetails" path="/jsp/admin/authentication/modifyAuthentication.jsp"/>
+			<forward name="viewDetails" path="/jsp/admin/authentication/newAuthentication.jsp"/>
+			<forward name="viewApproverInfo" path="/jsp/admin/authentication/approverDetails.jsp"/>
+			<forward name="searchUser" path="/jsp/admin/authentication/searchUsers.jsp"/>
+		</action>
+		<action attribute="subsubLinkArchiveForm" input="/jsp/admin/subLinkArchive.jsp" name="subsubLinkArchiveForm" parameter="method" path="/subsubLinkArchive" scope="request" type="com.microlabs.admin.action.SubSubLinkArchiveAction">
+			<forward name="display" path="/jsp/admin/subSubLinkArchive.jsp"/>
+		</action>
+		<action attribute="subLinkArchiveForm" input="/jsp/admin/subLinkArchive.jsp" name="subLinkArchiveForm" parameter="method" path="/subLinkArchive" scope="request" type="com.microlabs.admin.action.SubLinkArchiveAction">
+			<forward name="display" path="/jsp/admin/subLinkArchive.jsp"/>
+		</action>
+		<action attribute="announcementForm" input="/jsp/admin/announcement/displayAnnouncement.jsp" name="announcementForm" parameter="method" path="/announcement" scope="request" type="com.microlabs.admin.action.AnnouncementAction">
+			<forward name="addnewAnnouncement" path="/jsp/admin/announcement/AddnewAnnouncement.jsp"/>
+		    <forward name="announcementForm" path="/jsp/admin/announcement/displayAnnouncement.jsp"/>
+		 </action> 
+		<action attribute="userGroupForm" input="/jsp/admin/userGroup.jsp" name="userGroupForm" parameter="method" path="/userGroup" scope="request" type="com.microlabs.admin.action.UserGroupAction">
+		<forward name="display" path="/jsp/admin/userGroup/declareGroup.jsp"/>
+			<forward name="declareGroup1" path="/jsp/admin/userGroup/declareGroup1.jsp"/>
+			<forward name="declareGroup2" path="/jsp/admin/userGroup/declareGroup2.jsp"/>
+			<forward name="displayCMS" path="/jsp/admin/adminCMS.jsp"/>
+			<forward name="displayCMS1" path="/jsp/admin/adminCms1.jsp"/>
+		</action>
+		<action attribute="adminHolidayForm" input="/jsp/hr/holidaydetails.jsp" name="adminHolidayForm" parameter="method" path="/adminHoliday" scope="session" type="com.microlabs.admin.action.HolidayAction">
+			<forward name="displayHolidays" path="/jsp/admin/holidaydetails.jsp"/>
+			<forward name="modifyHolidays" path="/jsp/admin/modifyHolidays.jsp"/>
+			<forward name="displayEmpHolidays" path="/jsp/ess/holidays/holidaydetails.jsp" />
+				<forward name="empSearchHolidays" path="/jsp/ess/holidays/empSearchholiday.jsp" />
+		</action>
+		<action attribute="modifyUserGroupForm" input="/jsp/admin/modifyGroupRights.jsp" name="modifyUserGroupForm" parameter="method" path="/modifyUserGroup" scope="request" type="com.microlabs.admin.action.ModifyUserGroupAction">
+		<forward name="display" path="/jsp/admin/userGroup/modifyGroup.jsp"/>
+			<forward name="modifygroupname" path="/jsp/admin/userGroup/Modgrpname.jsp"/>
+			<forward name="assignuser" path="/jsp/admin/userGroup/assign_user.jsp"/>
+		</action>
+		<action attribute="activateUserForm" input="/jsp/admin/activateUser/activateUser.jsp" name="activateUserForm" parameter="method" path="/activateUser" scope="request" type="com.microlabs.admin.action.ActivateUserAction">
+			<forward name="display" path="/jsp/admin/activateUser/activateUser.jsp"/>
+		</action>
+		<action attribute="userForm" input="/jsp/admin/addUser.jsp" name="userForm" parameter="method" path="/addUser" scope="request" type="com.microlabs.admin.action.UserAction">
+			<forward name="display" path="/jsp/admin/user/addUser.jsp"/>
+			<forward name="searchEmployee" path="/jsp/admin/user/searchEmployee.jsp"/>
+		</action>
+		<action attribute="changePasswordForm" input="/jsp/admin/changePassword/changePassword.jsp" name="changePasswordForm" parameter="method" path="/changePassword" scope="request" type="com.microlabs.admin.action.ChangePasswordAction">
+			<forward name="display" path="/jsp/admin/changePassword/changePassword.jsp"/>
+		</action>
+		<action attribute="userRightsForm" input="/jsp/admin/user/modifyUserRights.jsp" name="userRightsForm" parameter="method" path="/modifyUserRights" scope="request" type="com.microlabs.admin.action.UserRightsAction">
+			<forward name="display" path="/jsp/admin/user/modifyUserRights.jsp"/>
+			<forward name="displayUsers" path="/jsp/admin/user/displayUsersList.jsp"/>
+			<forward name="searchUser" path="/jsp/admin/authentication/searchUsers.jsp"/>
+			<forward name="searchSubLink" path="/jsp/admin/user/selectSSubLink.jsp"/>
+			<forward name="displayAudit" path="/jsp/admin/auditreport.jsp"/>
+		</action>
+		<action attribute="modifyUserGroupForm" input="/jsp/admin/modifyGroupRights.jsp" name="modifyUserGroupForm" parameter="method" path="/modifyUserGroup" scope="request" type="com.microlabs.admin.action.ModifyUserGroupAction">
+		<forward name="display" path="/jsp/admin/userGroup/modifyGroup.jsp"/>
+			<forward name="modifygroupname" path="/jsp/admin/userGroup/Modgrpname.jsp"/>
+			<forward name="assignuser" path="/jsp/admin/userGroup/assign_user.jsp"/>
+		</action>
+		<action attribute="userReportsForm" input="/jsp/admin/userGroup/addNewUserGroup.jsp" name="userReportsForm" parameter="method" path="/userReports" scope="request" type="com.microlabs.modules.common.admin.action.UserReportsAction">
+			<forward name="staffInformation" path="/jsp/admin/reports/staffInformation.jsp"/>
+			<forward name="searchUserLog" path="/jsp/admin/reports/searchUser.jsp"/>
+			<forward name="showUserLog" path="/jsp/admin/reports/showUserLog.jsp"/>
+			<forward name="logCheck" path="/jsp/admin/reports/logCheck.jsp"/>
+			<forward name="logReport" path="/jsp/admin/reports/logReport.jsp"/>
+		</action>
+		<action attribute="securityQuestionsForm" input="/form/securityQuestions.jsp" name="securityQuestionsForm" parameter="method" path="/securityQuestions" scope="request" type="com.microlabs.admin.action.SecurityQuestionsAction">
+			<forward name="display" path="/jsp/admin/securityQuestions.jsp"/>
+		</action>
+		<action attribute="newProductForm" name="newProductForm" parameter="method" path="/products" scope="request" type="com.microlabs.admin.action.ProductAction">
+			<forward name="displayProducts" path="/jsp/admin/productImages/Images.jsp"/>
+		</action>
+		<action attribute="addExistingEMPForm" input="/jsp/admin/newAuthention.jsp" name="addExistingEMPForm" parameter="method" path="/addEmp" scope="request" type="com.microlabs.admin.action.EmpCreationAction">
+			<forward name="display" path="/jsp/admin/addExistingEmp/AddExistingEmpDetails.jsp"/>
+			<forward name="employeeList" path="/jsp/admin/addExistingEmp/EmployeeList.jsp"/>
+		</action>
+	</action-mappings>
+	<message-resources parameter="com.yourcompany.struts.ApplicationResources"/>
+</struts-config>

@@ -1,0 +1,61 @@
+<%@ page language="java" import="java.util.*" pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="/WEB-INF/tlds/struts-bean.tld" prefix="bean"%>
+<%@ taglib uri="/WEB-INF/tlds/struts-html.tld" prefix="html"%>
+<%@ taglib uri="/WEB-INF/tlds/struts-logic.tld" prefix="logic"%>
+<%@ taglib uri="http://java.fckeditor.net" prefix="FCK" %>
+<%@ taglib uri="/WEB-INF/tlds/c.tld" prefix="c"%>
+<%@ taglib uri="/WEB-INF/tlds/displaytag-11.tld" prefix="display"%>
+
+<jsp:directive.page import="com.microlabs.utilities.UserInfo"/>
+<jsp:directive.page import="com.microlabs.login.dao.LoginDao"/>
+<jsp:directive.page import="java.sql.ResultSet"/>
+<jsp:directive.page import="java.sql.SQLException"/>
+<jsp:directive.page import="java.util.ArrayList"/>
+<jsp:directive.page import="java.util.Iterator"/>
+<jsp:directive.page import="java.util.LinkedHashMap"/>
+<jsp:directive.page import="java.util.Set"/>
+<jsp:directive.page import="java.util.Map"/>
+<jsp:directive.page import="com.microlabs.utilities.IdValuePair"/>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <link rel="stylesheet" type="text/css" href="style3/css/microlabs.css" />
+	<link rel="stylesheet" type="text/css" href="style3/css/TableCSS.css" />
+	<link rel="stylesheet" type="text/css" href="style3/css/style.css" />
+  </head>
+  
+ <body>
+<font face="Arial">
+<p>
+
+<table class="bordered" >
+	<tr><th colspan="9"><center>Depot Information</center></th></tr>
+	<tr><th>Sl.No.</th><th>Code</th><th>Contact Person</th><th>Address</th><th>City</th><th>State</th><th>Postal</th><th>Telephone</th><th>e-mail</th><tr>
+	<tr><td>1</td><td>ML 22</td><td>Mr.Arun Prasath</td><td>PLOT NO.37, 147-151, 279/281 BOMMASANDRA, JIGNI-LINK ROAD, ANEKAL TQ </td><td>BANGALORE</td><td>Karnataka</td><td>560099</td><td>09620253964</td><td></td></tr>
+	<tr><td>2</td><td>ML51</td><td>Mr. ANIL BHANDARI</td><td>PLOT NOS. 6&7,SAKET INDL. ESTATE,NEAR	NOVA PETROCHEM LTD., MORAIYA,TA.SANAND</td><td>AHMEDABAD</td><td>Gujarat</td><td>382210</td><td>079 26850192</td><td>ahmddepot@microlabs.in</td></tr>
+	<tr><td>3</td><td>ML52</td><td>Mr. Amit Jain</td><td>PADAM MANSION,	8-B, CIRCULAR ROAD</td><td>AMRITSAR</td><td>Punjab</td><td>143006</td><td>0183 3204000</td><td>asrdepot@microlabs.in</td></tr>
+	<tr><td>4</td><td>ML53</td><td>Mr. Suresh Kathar</td><td>NO.25,SANCHETI ARCADE,	OPP.PANDARAPURA BUSTAND, MIDC, WALUJ</td><td>AURANGABAD</td><td>Maharashtra</td><td>431005</td><td>0240 2556375</td><td>abaddepot@microlabs.in</td></tr>
+	<tr><td>5</td><td>ML54</td><td>Mr. Ramkumar</td><td>NO.76, 2ND FLOOR,	SRI  VAGDEVI MANSION, OLD THARAGUPET</td><td>BANGALORE</td><td>Karnataka</td><td>560053</td><td>080 27839128 / 09342487430</td><td>blrdepot@microlabs.in</td></tr>
+	<tr><td>6</td><td>ML55</td><td>Mr. Pradeep</td><td>PLOT NO. A-21, UNIT-IV,	BHOUMYA NAGAR</td><td>BHUBANESHWAR</td><td>Orissa</td><td>751001</td><td>0674 2507258,2400694</td><td>bbsrdepot@microlabs.in</td></tr>
+	<tr><td>7</td><td>ML56</td><td>Mr. Rikunj Solanki</td><td>NO.50/857-E1, CHANGAMPUZHA	SAMADHI ROAD EDAPPALLY  PO</td><td>ERNAKULAM</td><td>Kerala</td><td>682024</td><td>0484 - 2331619, 3915404, 3968868</td><td>erndepot@microlabs.in</td></tr>
+	<tr><td>8</td><td>ML57</td><td>Mr. Karun Jain / Subodh Jain</td><td>SE-7, ROOM NO.4,	SHASTRI NAGAR</td><td>GHAZIABAD</td><td>Uttar Pradesh</td><td>201002</td><td>0120 2764491,2764845</td><td>gzbdepot@microlabs.in</td></tr>
+	<tr><td>9</td><td>ML58</td><td>Mr. Avinash Dagliya</td><td>SURVEY NO. 1113/2 & 1114, ALASANATHAM	VILLAGE,CHENNATHUR PANCHAYAT</td><td>HOSUR</td><td>Tamil Nadu</td><td>635109</td><td>04344-325508</td><td>hosurdepot@microlabs.in</td></tr>
+	<tr><td>10</td><td>ML59</td><td>Mr. Nirmal Lunia</td><td>NO.23, SECTOR-FF,	SCHEME NO.54</td><td>INDORE</td><td>Madhya Pradesh</td><td>452010</td><td>0731 2591258</td><td>indoredepot@microlabs.in</td></tr>
+	<tr><td>11</td><td>ML60</td><td>Mr. Rajgopal</td><td>D-193, TRENCHING GROUND ROAD	FIRST FLOOR</td><td>KOLKATA</td><td>West Bengal</td><td>700024</td><td>Mob: 09831326125</td><td>koldepot@microlabs.in</td></tr>
+	<tr><td>12</td><td>ML61</td><td>Mr. Kamal</td><td>B-29, INDUSTRIAL AREA,	G.T.KARNAL ROAD</td><td>DELHI</td><td>Delhi</td><td>110033</td><td>011- 27119433 / 32505452</td><td>delhidepot@microlabs.in</td></tr>
+	<tr><td>13</td><td>ML63</td><td>Mr. Ritesh Rathore</td><td>2-74-135,LINGA REDDY MANSION,GR.FLOOR	SIKH VILLAGE,OPP:HANUMAN TEMPLE,TAD BUND</td><td>SECUNDERABAD</td><td>Andra Pradesh</td><td>500009</td><td>040-27819738, 27814018</td><td>sbaddepot@microlabs.in</td></tr>
+	<tr><td>14</td><td>ML64</td><td>-</td><td>	30-CIVIL LINE,	HARIDWAR</td><td>ROORKEE</td><td>Pondicherry</td><td>247667</td><td>-</td><td>-</td></tr>		
+	<tr><td>15</td><td>ML65</td><td>Mr. Satish Kumar</td><td>46, INDUSTRIAL AREA,PHASE - 2</td><td>PANCHKULA</td><td>Haryana</td><td>134113</td><td>0172 -  5048146, 5064146</td><td>pnkldepot@microlabs.in</td></tr>
+	<tr><td>16</td><td>ML67</td><td>Mr. Janardhan Prasad</td><td>PUSHPA WARE HOUSE	PAHARI MORE, NH-30</td><td>PATNA</td><td>Bihar</td><td>800007</td><td>0612 - 3200875</td><td>patnadepot@microlabs.in</td></tr>
+	<tr><td>17</td><td>ML68</td><td>Mr. Avinash Dagliya / Mr.Manoj</td><td>BASEMENT, K.NO. 709/828, 810/942,	PABHAT GODOWN AREA</td><td>MOHALI</td><td>Punjab</td><td>140603</td><td>01762 - 2522810</td><td>genericsdepot@microlabs.in</td></tr>
+	<tr><td>18</td><td>ML 69</td><td>Mr. Gowtam</td><td>D.NO:76-12B, DOLPHIN BAR LANE, BESIDE LORRY STAND, BHAVANIPURAM, </td><td>VIJAYAWADA</td><td>Seemandhra</td><td>520012</td><td>09392924544</td><td></td></tr>
+	<tr><td>19</td><td>ML90</td><td>Mr. Ravi Banagari</td><td>Sy.No 201 & 202 Kudlu Village	Sarjapura Hobli Anekal Taluk</td><td>BANGALORE</td><td>Karnataka</td><td>560068</td><td>080 - 2573 1938 / 5832</td><td>sampledepot@microlabs.in</td></tr>
+	<tr><td>20</td><td>ML91</td><td>Mr. Ravi Banagari</td><td>No- 245/ 58/12 Kudlu Village,Kudlu main	road,Sarjapur Hobli Anekal Taluk</td><td>BANGALORE</td><td>Karnataka</td><td>560068</td><td>080 - 2573 1938 / 5832</td><td>sampledepot@microlabs.in</td></tr>
+
+</table>
+</font>
+</body>
+</html>

@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<data-sources/>
+	<form-beans>
+		<form-bean name="fckEditorForm" type="com.microlabs.newsandmedia.form.FckEditorForm"/>
+		<form-bean name="linksForm" type="com.microlabs.admin.form.LinksForm"/>
+		<form-bean name="linksArchiveForm" type="com.microlabs.admin.form.LinksArchiveForm"/>
+		<form-bean name="loginForm" type="com.microlabs.login.form.LoginForm"/>
+		<form-bean name="mainForm" type="com.microlabs.main.form.MainForm"/>
+		<form-bean name="newsAndMediaForm" type="com.microlabs.newsandmedia.form.NewsAndMediaForm"/>
+		<form-bean name="calenderForm" type="com.microlabs.newsandmedia.form.CalenderForm"/>
+		<form-bean name="hrForm" type="com.microlabs.hr.form.HRForm"/>
+		<form-bean name="hrNewEmpForm" type="com.microlabs.hr.form.HRNewEmpJoinForm"/>
+		<form-bean name="hrRecruitmentForm" type="com.microlabs.hr.form.HRRecruitmentForm"/>
+		<form-bean name="hrManPowerMatrixForm" type="com.microlabs.hr.form.HRManPowerMatrixForm"/>
+		<form-bean name="hrOfferLetterForm" type="com.microlabs.hr.form.HRIssueOfferLetterForm"/>
+		<form-bean name="itForm" type="com.microlabs.it.form.ITForm"/>
+		<form-bean name="activeDirectoryForm" type="com.microlabs.it.form.ActiveDirectoryForm"/>
+		<form-bean name="serviceLevelAgreementForm" type="com.microlabs.it.form.ServiceLevelAgreementForm"/>
+		<form-bean name="hrCompanyDetailsForm" type="com.microlabs.hr.form.HRCompanyDetailsForm"/>
+		<form-bean name="holidayForm" type="com.microlabs.hr.form.HolidayForm"/>
+		<form-bean name="todoForm" type="com.microlabs.toDoTask.form.ToDoTaskForm"/>
+		<form-bean name="archivesForm" type="com.microlabs.newsandmedia.form.ArchivesForm"/>
+		<form-bean name="myRequestForm" type="com.microlabs.myrequest.form.MyRequestForm"/>
+		<form-bean name="feedbackForm" type="com.microlabs.feedback.form.FeedBackForm"/>
+		
+		
+		
+	</form-beans>
+	<global-exceptions>
+	
+	 
+	   <exception key="error.global.mesage"
+	      type="java.lang.NullPointerException"
+	      path="/jsp/ess/sessionExpiredLink.jsp"/>
+	</global-exceptions>
+	<global-forwards >
+  <forward name="displayiFrameSession" path="/jsp/ess/sessionExpiredLink.jsp"></forward>
+  </global-forwards>
+	<action-mappings>
+	
+		<action attribute="feedbackForm" input="/jsp/main/feedBack/feedBack.jsp" name="feedbackForm" parameter="method" path="/feedBack" scope="request" type="com.microlabs.feedback.action.FeedBackAction">
+			<forward name="displayFeedBackForm" path="/jsp/main/feedBack/feedBack.jsp"/>
+			<forward name="modifyFeedbackForm" path="/jsp/admin/feedBack/modifyFeedback.jsp"/>
+		</action>
+		<action attribute="myRequestForm" input="/jsp/main/myRequest/myRequestList.jsp" name="myRequestForm" parameter="method" path="/myRequest" scope="request" type="com.microlabs.myrequest.action.MyRequestAction">
+				<forward name="displayMyRequestiframe" path="/jsp/main/myRequest/myRequestiframe.jsp"/>
+			<forward name="displayMyRequestiframe" path="/jsp/main/myRequest/myRequestiframe.jsp"/>
+			<forward name="displayMyRequestList" path="/jsp/main/myRequest/myRequestList.jsp"/>
+			<forward name="exportdisplayMyRequestList" path="/jsp/main/myRequest/exportmyRequestList.jsp"/>
+			<forward name="myLeave" path="/jsp/main/myRequest/Leave.jsp"/>
+			<forward name="rawmaterial" path="/jsp/main/myRequest/RawMaterial.jsp"/>
+			<forward name="pacmaterial" path="/jsp/main/myRequest/PackageMaterial.jsp"/>
+		    <forward name="semimaterial" path="/jsp/main/myRequest/SemiFinished.jsp"/>
+		    <forward name="finmaterial" path="/jsp/main/myRequest/FinishedProducts.jsp"/>
+		    <forward name="promaterial" path="/jsp/main/myRequest/Promotional.jsp"/>
+		    <forward name="genmaterial" path="/jsp/main/myRequest/GeneralMaterial.jsp"/>
+		    <forward name="planmaterial" path="/jsp/main/myRequest/ZPSR.jsp"/>
+		    <forward name="sermaterial" path="/jsp/main/myRequest/serviceMasterRequest.jsp"/>
+		    <forward name="extmaterial" path="/jsp/main/myRequest/MaterialExtension.jsp"/>
+		    <forward name="venmaterial" path="/jsp/main/myRequest/vendorMasterRequest.jsp"/>
+		    <forward name="CustomerMaster" path="/jsp/main/myRequest/customerMaster.jsp"/>
+		    <forward name="Permission" path="/jsp/main/myRequest/Permission.jsp"/>
+		    <forward name="onDuty" path="/jsp/main/myRequest/OnDuty.jsp"/>
+		    <forward name="viewAduserCreationform"  path="/jsp/main/myRequest/HelpDesk/viewAdUserCreation.jsp"/>
+			<forward name="viewAduserDeletionform"  path="/jsp/main/myRequest/HelpDesk/viewAdUserDeletion.jsp"/>
+			<forward name="viewAduserTransferform"  path="/jsp/main/myRequest/HelpDesk/viewAdUserTransfer.jsp"/>
+	     	<forward name="viewLotusIDCreationform"  path="/jsp/main/myRequest/HelpDesk/viewLotusIdCreation.jsp"/>
+	     	<forward name="viewLotusIDChangeform"  path="/jsp/main/myRequest/HelpDesk/viewLotusIdChange.jsp"/>
+	     	<forward name="viewLotusIDDeletionform"  path="/jsp/main/myRequest/HelpDesk/viewLotusIdDeletion.jsp"/>
+	     	<forward name="viewInternetAccessform"  path="/jsp/main/myRequest/HelpDesk/viewInternetAccess.jsp"/>
+	     	<forward name="viewexternaldrivesform"  path="/jsp/main/myRequest/HelpDesk/viewExternalDrives.jsp"/>
+	     	<forward name="viewFtpAccessform"  path="/jsp/main/myRequest/HelpDesk/viewFTPAccess.jsp"/>
+	     	<forward name="viewFolderAccessform"  path="/jsp/main/myRequest/HelpDesk/viewFolderAccess.jsp"/>
+	     	 <forward name="viewNewITAssetform"  path="/jsp/main/myRequest/HelpDesk/viewNewITAsset.jsp"/>
+	     	   <forward name="viewNewITSparesform"  path="/jsp/main/myRequest/HelpDesk/viewNewSpareAsset.jsp"/>
+	     	 <forward name="Conference"  path="/jsp/main/myRequest/conference/Conference.jsp"/>
+<forward name="VCRoom"  path="/jsp/main/myRequest/VCRoom/VCRoom.jsp"/>
+<forward name="viewNewSapRequestform"  path="/jsp/main/myRequest/viewsapitissueuser.jsp"/> 
+		</action>
+		<action attribute="archivesForm" input="/jsp/newsAndMedia/archives/archives.jsp" name="archivesForm" parameter="method" path="/archieves" scope="request" type="com.microlabs.newsandmedia.action.ArchivesAction">
+			<forward name="displayArchieves" path="/jsp/newsAndMedia/archives/archives.jsp"/>
+			<forward name="displayMainLinks" path="/jsp/newsAndMedia/archives/archivesContent1.jsp"/>
+		</action>
+		<action attribute="linksArchiveForm" input="/jsp/admin/links.jsp" name="linksArchiveForm" parameter="method" path="/linksArchive" scope="request" type="com.microlabs.admin.action.LinksArchiveAction">
+			<forward name="displayMainLinks" path="/jsp/admin/archive/mainLinksArchive.jsp"/>
+		</action>
+		<action attribute="todoForm" input="/jsp/toDo/toDoTask.jsp" name="todoForm" parameter="method" path="/todoTask" scope="request" type="com.microlabs.toDoTask.action.ToDoTaskAction">
+				<forward name="display" path="/jsp/toDo/toDoTask.jsp"/>
+			<forward name="displayReminderDetails" path="/jsp/toDo/remainderList.jsp"/>
+			<forward name="ajaxTest" path="/jsp/toDo/ajaxTest.jsp"/>
+			<forward name="displayHOD" path="/jsp/toDo/hodToDoTask.jsp"/>
+			<forward name="appList" path="/jsp/toDo/appList.jsp"/>
+			<forward name="holList" path="/jsp/toDo/holiday.jsp"/>
+			<forward name="displaytodo" path="/jsp/toDo/entertaskdetails.jsp"/>
+		</action>
+		<action attribute="hrCompanyDetailsForm" input="/jsp/hr/hrKnowCompanyDetails.jsp" name="hrCompanyDetailsForm" parameter="method" path="/hrCompanyDetails" scope="request" type="com.microlabs.hr.action.HRCompanyDetailsAction">
+			<forward name="display" path="/jsp/hr/links.jsp"/>
+			<forward name="display1" path="/jsp/hr/linksmodify.jsp"/>
+			<forward name="displayMainLinks" path="/jsp/hr/mainLinks.jsp"/>
+		</action>
+		<action attribute="holidayForm" input="/jsp/hr/holidaydetails.jsp" name="holidayForm" parameter="method" path="/holidays" scope="request" type="com.microlabs.hr.action.HolidayAction">
+			<forward name="displayHRList" path="/jsp/hr/holidaydetails.jsp"/>
+		</action>
+		<action attribute="serviceLevelAgreementForm" input="/jsp/it/ServiceLevelAgreement.jsp" name="serviceLevelAgreementForm" parameter="method" path="/serviceLevelAgreement" scope="session" type="com.microlabs.it.action.ServiceLevelAgreementAction">
+			<forward name="allServiceLevels" path="/jsp/it/ServiceLevelAgreement.jsp"/>
+			<forward name="newServiceLevelAgremForm" path="/jsp/it/newServiceLevelAgreement.jsp"/>
+		</action>
+		<action attribute="itForm" input="/jsp/it/it.jsp" name="itForm" parameter="method" path="/it" scope="session" type="com.microlabs.it.action.ITAction">
+			<forward name="display" path="/jsp/it/it.jsp"/>
+			<forward name="display1" path="/jsp/it/itCMS.jsp"/>
+			<forward name="displayCMS1" path="/jsp/it/itIframecms.jsp"/>
+			<forward name="newITRequeshForm" path="/jsp/it/itRequstForm.jsp"/>
+			<forward name="displayIssusesForm" path="/jsp/it/itIssuesForm.jsp"/>
+			<forward name="displayCMS" path="/jsp/it/itCMS.jsp"/>
+			<forward name="displaySecondCMS" path="/jsp/it/itIframecms2.jsp"/>
+			<forward name="displayThirdCMS" path="/jsp/it/itIframecms3.jsp"/>
+			<forward name="displayCorporate" path="/jsp/it/ITContacts/Corporate.jsp"/>
+			<forward name="displayPolicyList" path="/jsp/it/Policies/itPolicyList.jsp"/>
+			<forward name="InternetUsage" path="/jsp/it/Policies/InternetUsage.jsp"/>
+			<forward name="ItProcurement" path="/jsp/it/Policies/ItProcurement.jsp"/>
+			<forward name="displayITEngineersList" path="/jsp/it/IT Engineers/MPLS.jsp"/>
+		</action>
+		<action attribute="activeDirectoryForm" input="/jsp/it/ActiveDirectoryForm.jsp" name="activeDirectoryForm" parameter="method" path="/activeDirectory" scope="session" type="com.microlabs.it.action.ActiveDirectoryAction">
+			<forward name="newactiveDirectoryForm" path="/jsp/it/ActiveDirectoryForm.jsp"/>
+			<forward name="reqADForm" path="/jsp/it/adIssuesForm.jsp"/>
+			<forward name="displayupdateADForm" path="/jsp/it/ActiveDirectoryUpdateForm.jsp"/>
+		</action>
+		<action attribute="calenderForm" input="/jsp/calender/calendar.jsp" name="calenderForm" parameter="method" path="/calender" scope="session" type="com.microlabs.calender.action">
+			<forward name="display" path="/jsp/calender/calendar.jsp"/>
+		</action>
+		<action attribute="calenderForm" input="/jsp/newsAndMedia/calender.jsp" name="calenderForm" parameter="method" path="/calender" scope="session" type="com.microlabs.newsandmedia.action.CalenderAction">
+			<forward name="display" path="/jsp/newsAndMedia/calendar.jsp"/>
+		</action>
+		<action attribute="loginForm" input="/jsp/login/login.jsp" name="loginForm" parameter="method" path="/login" scope="request" type="com.microlabs.login.action.LoginAction">
+			<forward name="display" path="/jsp/login/login.jsp"/>
+			<forward name="home" path="/jsp/main/main.jsp"/>
+			<forward name="temphome" path="/jsp/main/mainPageForTemp.jsp"/>
+			<forward name="displayForgotPage" path="/jsp/login/forgotPassword/forgetPassword.jsp"/>
+			<forward name="displayLoginPage" path="/jsp/login/login1.jsp"/>
+			<forward name="displayForgotPage1" path="/jsp/login/forgotPassword/forgotPasswordPage.jsp"/>
+			<forward name="helpContetDescription" path="/jsp/main/helpContent.jsp"/>
+			<forward name="displayPasswordChange" path="/jsp/login/passwordExpiry/PasswordExpiryChange.jsp"/>
+			
+					<forward name="displaycaptchaimage" path="/jsp/login/Captchaimage.jsp"/>
+		</action>
+		<action attribute="fckEditorForm" input="/jsp/newsAndMedia/fckEditor.jsp" name="fckEditorForm" parameter="method" path="/fckEditor" scope="request" type="com.microlabs.newsandmedia.action.FckEditorAction">
+			<forward name="display" path="/jsp/newsAndMedia/fckEditor.jsp"/>
+			<forward name="displaycontent" path="/jsp/newsAndMedia/modifyfckeditor.jsp"/>
+		</action>
+		<action attribute="linksForm" input="/jsp/admin/links.jsp" name="linksForm" parameter="method" path="/links" scope="request" type="com.microlabs.admin.action.LinksAction">
+			<forward name="display" path="/jsp/admin/links.jsp"/>
+			<forward name="display1" path="/jsp/admin/linksmodify.jsp"/>
+			<forward name="displayMainLinks" path="/jsp/admin/mainLinks.jsp"/>
+			<forward name="displayCmsLinks" path="/jsp/admin/cmslinks.jsp"/>
+			<forward name="displayCmsLinksModify" path="/jsp/admin/cmslinksmodify.jsp"/>
+		</action>
+		<action attribute="hrForm" input="/jsp/hr/hr.jsp" name="hrForm" parameter="method" path="/hr" scope="request" type="com.microlabs.hr.action.HRAction">
+			<forward name="display" path="/jsp/hr/hr.jsp"/>
+			<forward name="display1" path="/jsp/hr/hrCMS.jsp"/>
+			<forward name="displayCMS1" path="/jsp/hr/hrIframecms.jsp"/>
+			<forward name="guesthouse" path="/jsp/hr/GuestHouseDetails/GuestHouse.html"/>
+			<forward name="leavpolicylist" path="/jsp/hr/Policies/policlylist.jsp"/>
+			<forward name="womenpolicylist" path="/jsp/hr/Policies/womenPolicy.jsp"/>
+				<forward name="displayHRAssetList" path="/jsp/hr/HRAssets/HRassetList.jsp"/>
+			<forward name="newHRassetform" path="/jsp/hr/HRAssets/newHRAssetForm.jsp"/>
+			<forward name="displayHRAssetLOG" path="/jsp/hr/HRAssets/HRassetLog.jsp"/>
+		</action>
+		<action attribute="hrNewEmpForm" input="/jsp/hr/hrNewEmpForm.jsp" name="hrNewEmpForm" parameter="method" path="/hrNewEmp" scope="request" type="com.microlabs.hr.action.HREmpAction">
+			<forward name="displayEmployee" path="/jsp/hr/EmployeeInfo.jsp"/>
+			<forward name="displayNewEmpJoinForm" path="/jsp/hr/NewEmpJoinForm.jsp"/>
+		</action>
+		<action attribute="hrRecruitmentForm" input="/jsp/hr/hrNewEmpForm.jsp" name="hrRecruitmentForm" parameter="method" path="/hrRecruitment" scope="request" type="com.microlabs.hr.action.HRRecruitmentAction">
+			<forward name="displayRecrutmentList" path="/jsp/hr/HrRecruitmentRequest.jsp"/>
+			<forward name="displayRecruitmentRequestForm" path="/jsp/hr/RecruitmentRequestForm.jsp"/>
+			<forward name="approvalForm" path="/jsp/hr/hrApprovalRequestForm.jsp"/>
+			<forward name="pendingRequest" path="/jsp/hr/PendingRecruitmentRequestDetails.jsp"/>
+			<forward name="forwardEmployeeListForm" path="/jsp/hr/forwardemployeeLists.jsp"/>
+			<forward name="displayCurrentOpenings" path="/jsp/hr/currentOpenings.jsp"/>
+		</action>
+		<action attribute="hrManPowerMatrixForm" input="/jsp/hr/hrNewEmpForm.jsp" name="hrManPowerMatrixForm" parameter="method" path="/hrManPower" scope="request" type="com.microlabs.hr.action.HRManPowerMatrixAction">
+			<forward name="displayMPMList" path="/jsp/hr/hrManPower.jsp"/>
+			<forward name="newManPowerMatrixForm" path="/jsp/hr/hrManPowerForm.jsp"/>
+			<forward name="sendManPowerRequest" path="hrManPower.do?method=displayManPower" redirect="true"/>
+		</action>
+		<action attribute="hrOfferLetterForm" input="/jsp/hr/hrIssueOfferLetter.jsp" name="hrOfferLetterForm" parameter="method" path="/hrIssueOfferLetter" scope="request" type="com.microlabs.hr.action.HRIssueOfferLetterAction">
+			<forward name="displayOfferLetter" path="/jsp/hr/hrIssueOfferLetter.jsp"/>
+			<forward name="displayCurrentOpenings" path="/jsp/hr/displayCurrentOpenings.jsp"/>
+		</action>
+		<action attribute="mainForm" input="/jsp/main/main.jsp" name="mainForm" parameter="method" path="/main" scope="request" type="com.microlabs.main.action.MainAction">
+			<forward name="temphome" path="/jsp/main/mainPageForTemp.jsp"/>
+			<forward name="home" path="/jsp/main/main.jsp"/>
+			<forward name="logout" path="/jsp/login/login.jsp"/>
+			<forward name="display" path="/jsp/main/main.jsp"/>
+			<forward name="displayContentDescription" path="/jsp/main/mainContent.jsp"/>
+			<forward name="displayMoreHeadLines" path="/jsp/main/mainMoreHeadLines.jsp"/>
+			<forward name="displayLoginPage" path="/jsp/login/login1.jsp"/>
+			<forward name="displayAnnouncement" path="/jsp/main/mainAnnouncements.jsp"/>
+			<forward name="calendar" path="/jsp/main/calendar.jsp"/>
+			<forward name="aboutHolidayDetails" path="/jsp/main/aboutHolidayDetails.jsp"/>
+			<forward name="displaythoughts" path="/jsp/main/thoughts.jsp" />
+					<forward name="messageFromManagment" path="/jsp/main/msg_from_mgmt.jsp" />
+					<forward name="thoughtsAndBirthday" path="/jsp/main/thoughtsAndBirthday.jsp" />
+		</action>
+		<action attribute="newsAndMediaForm" input="/jsp/newsAndMedia/newsAndMedia.jsp" name="newsAndMediaForm" parameter="method" path="/newsAndMedia" scope="request" type="com.microlabs.newsandmedia.action.NewsAndMediaAction">
+			<forward name="display" path="/jsp/newsAndMedia/newsAndMedia.jsp"/>
+			<forward name="displayCalendar" path="/jsp/newsAndMedia/calendar.jsp"/>
+			<forward name="display1" path="/jsp/newsAndMedia/newsAndMediaCMS.jsp"/>
+			<forward name="displayLinksContent" path="/jsp/newsAndMedia/newsAndMediaLinks.jsp"/>
+			<forward name="displayGallery" path="/themes/classic/classic-demo.jsp"/>
+			<forward name="displayArchivesCms" path="/jsp/newsAndMedia/newsAndMediaArchivesCms.jsp"/>
+			<forward name="displayCMS" path="/jsp/newsAndMedia/newsAndMediaCms1.jsp"/>
+			<forward name="displaySession" path="/jsp/ess/sessionExpiredLink.jsp"/>
+			<forward name="ML01 HOSUR" path="/jsp/newsAndMedia/PlanInfo/ml01_hosur.html"/>
+			<forward name="ML14 EYE DROPS" path="/jsp/newsAndMedia/PlanInfo/ml14_eyedrops.html"/>
+		    <forward name="ML15 API" path="/jsp/newsAndMedia/PlanInfo/ml15_api.html"/>
+		    <forward name="ML25 VEERSANDRA" path="/jsp/newsAndMedia/PlanInfo/ml25_veersandra.html"/>
+		    <forward name="ML03 HOSUR" path="/jsp/newsAndMedia/PlanInfo/ml03_hosur.html"/>
+		    <forward name="ML05 PONDICHERRY" path="/jsp/newsAndMedia/PlanInfo/ml05_pondicherry.html"/>
+		    <forward name="ML06 GOA" path="/jsp/newsAndMedia/PlanInfo/ml06_goa.html"/>
+		    <forward name="ML07 DRY POWDER" path="/jsp/newsAndMedia/PlanInfo/ml07_drypowder.html"/>
+		    <forward name="ML08 KUMBALGODU" path="/jsp/newsAndMedia/PlanInfo/ml08_kumbalgodu.html"/>
+		    <forward name="ML11 VEERSANDRA" path="/jsp/newsAndMedia/PlanInfo/ml11_veersandra.html"/>
+		    <forward name="ML12 PEENYA_2" path="/jsp/newsAndMedia/PlanInfo/ml12_peenya2.html"/>
+		    <forward name="ML13 BADDI" path="/jsp/newsAndMedia/PlanInfo/ml13_baddi.html"/>
+		    <forward name="Vision And Aspiration" path="/jsp/newsAndMedia/ABOUT COMPANY/vision_aspiration.html"/>
+		    <forward name="Awards and Achievements" path="/jsp/newsAndMedia/ABOUT COMPANY/awards.html"/>
+		   <forward name="Depot Information" path="/jsp/newsAndMedia/ABOUT COMPANY/depo_info.jsp"/>
+		     <forward name="Global Presence" path="/jsp/newsAndMedia/ABOUT COMPANY/global_presence.html"/>
+		      <forward name="CSR Activities" path="/jsp/newsAndMedia/ABOUT COMPANY/csr_activities.html"/>
+		      
+		         <forward name="plantlist" path="/jsp/newsAndMedia/plantlist.jsp"/>  
+		         <forward name="Corporate Presentation" path="/jsp/newsAndMedia/ABOUT COMPANY/CompanyFiles.jsp"/>  
+		         
+		         	       <forward name="r_Dlist" path="/jsp/newsAndMedia/ABOUT COMPANY/R_DList.jsp"/> 
+		      <forward name="Research And Development" path="/jsp/newsAndMedia/ABOUT COMPANY/ml18_rnd.html"/> 
+		       <forward name="Research And Development2" path="/jsp/newsAndMedia/ABOUT COMPANY/ml27_rnd.html"/>  
+		          <forward name="displayTemplates" path="/jsp/newsAndMedia/Templates/TemplateList.jsp"/> 
+		</action>
+		
+    	
+    	
+    	
+    	
+	</action-mappings>
+	<message-resources parameter="com.yourcompany.struts.ApplicationResources"/>
+</struts-config>

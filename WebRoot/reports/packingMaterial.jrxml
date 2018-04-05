@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="packingMaterial" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="61" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="58" splitType="Stretch">
+			<line>
+				<reportElement x="1" y="12" width="554" height="1"/>
+			</line>
+			<line>
+				<reportElement x="0" y="57" width="555" height="1"/>
+			</line>
+			<line>
+				<reportElement x="0" y="12" width="1" height="45"/>
+			</line>
+			<line>
+				<reportElement x="555" y="13" width="1" height="44"/>
+			</line>
+			<line>
+				<reportElement x="128" y="13" width="1" height="44"/>
+			</line>
+			<staticText>
+				<reportElement x="151" y="24" width="350" height="21"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MICRO LABS LIMITED, HOSUR(ML 03) ]]></text>
+			</staticText>
+			<image>
+				<reportElement x="1" y="13" width="103" height="44"/>
+				<imageExpression class="java.lang.String"><![CDATA["C:\\rudra\\Adstock\\7-02-2012\\EMicro\\WebRoot\\images\\micro_logo.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="52" splitType="Stretch">
+			<staticText>
+				<reportElement x="1" y="11" width="383" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[REQUEST FOR NEW ITEM CODE FOR PACKING MATERIAL]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="401" y="11" width="154" height="41"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="402" y="31" width="100" height="21"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[To filled by QA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="402" y="11" width="89" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Request serial no:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="501" y="11" width="54" height="20"/>
+				<textElement/>
+				<text><![CDATA[RM130045]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
