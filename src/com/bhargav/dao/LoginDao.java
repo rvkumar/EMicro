@@ -21,8 +21,8 @@ public class LoginDao {
 
     StringBuilder queryBuilder = new StringBuilder("select * from users where");
     queryBuilder.append(" username = '").append(loginForm.getUserName()).append("'");
-    queryBuilder.append(" password = '").append(loginForm.getPassword()).append("'");
-    queryBuilder.append(" status = '1' and activated='On'");
+    queryBuilder.append(" and password = '").append(loginForm.getPassword()).append("'");
+    queryBuilder.append(" and status = '1' and activated='On'");
     return getUserInfo(queryBuilder.toString());
 
   }
